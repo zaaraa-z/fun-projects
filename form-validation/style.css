@@ -1,0 +1,115 @@
+@import url('https://fonts.googleapis.com/css2?family=Arimo&display=swap');
+
+:root {
+  --error: rgb(212, 11, 105);
+  --success: rgb(23, 182, 57);
+  --main-violet: rgb(152, 98, 240);
+  --second-violet: rgb(244, 229, 248);
+}
+
+* {
+  box-sizing: border-box;
+  font-family: 'Arimo', sans-serif;
+  transition: 0.5s;
+}
+
+body {
+  background-color: var(--second-violet);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  margin: 0;
+}
+
+.container {
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 1px 5px 10px rgb(97, 97, 97);
+  width: 90vw;
+  max-width: 400px;
+}
+
+h2 {
+  text-align: center;
+  margin: 0 0 40px;
+}
+
+form {
+  padding: 40px;
+}
+
+.form-control {
+  position: relative;
+  padding-bottom: 20px;
+  padding-top: 13px;
+  margin-bottom: 12px;
+}
+
+.form-control label {
+  position: absolute;
+  top: -7px;
+  left: 0;
+  color: gray;
+}
+
+.form-control input {
+  border-radius: 5px;
+  border: solid 1px rgba(0, 0, 0, 0.411);
+  width: 100%;
+  padding: 10px;
+}
+.form-control input:hover {
+  background-color: var(--second-violet);
+  border-color: var(--second-violet);
+}
+.form-control input:focus {
+  outline: 0;
+  border: solid 1px var(--main-violet);
+}
+
+.form-control input:focus + label {
+  color: var(--main-violet);
+}
+
+.form-control small {
+  color: var(--error);
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  visibility: hidden; /*tip*/
+}
+@media only screen and (max-width: 350px) {
+  .form-control small {
+    font-size: 11px;
+    white-space: nowrap;
+  }
+}
+
+button {
+  cursor: pointer;
+  width: 100%;
+  height: 40px;
+  border-radius: 5px;
+  border: 0;
+  background-color: var(--main-violet);
+  color: white;
+  margin-top: 15px;
+}
+button:hover {
+  background-color: white;
+  color: var(--main-violet);
+  border: solid 1px var(--main-violet);
+}
+
+/*tip**/
+/*changing border color in case of success.error*/
+.form-control.success input {
+  border: solid 1px var(--success);
+}
+.form-control.error input {
+  border: solid 1px var(--error);
+}
+.form-control.error small {
+  visibility: visible; /*tip*/
+}
