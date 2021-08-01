@@ -101,6 +101,9 @@ button:hover {
   color: var(--main-violet);
   border: solid 1px var(--main-violet);
 }
+button:focus {
+  outline: 0;
+}
 
 /*tip**/
 /*changing border color in case of success.error*/
