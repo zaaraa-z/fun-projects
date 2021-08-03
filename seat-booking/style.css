@@ -101,11 +101,11 @@ small {
   background-color: var(--gray);
 }
 
-.seat-container .seat:not(.sold) {
+.row .seat:not(.sold) {
   cursor: pointer;
   transition: transform 0.4s;
 }
-.seat-container .seat:not(.sold):hover {
+.row .seat:not(.sold):hover {
   transform: scale(1.2);
   transition: 0.4s;
 }
