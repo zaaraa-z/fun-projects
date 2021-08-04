@@ -4,9 +4,12 @@ const seats = document.querySelectorAll('.row .seat:not(.sold)');
 const proceed = document.getElementsByTagName('button');
 const seatsNumber = document.getElementById('number');
 const totalPrice = document.getElementById('total');
-let ticketPrice = +movieSelect.value;
-
 //-----------------------------------------------------
+populateUI(); //tip: if we write this function after next variable, by reloading the UI, it can not receive the stored movie ticket price and will operate on the default one ($10)
+//-----------------------------------------------------
+let ticketPrice = +movieSelect.value;
+//-----------------------------------------------------
+
 function storeMovieData(movieIndex, movieTicketPrice) {
   localStorage.setItem('selectedMovieIndex', movieIndex);
   localStorage.setItem('selectedMovieTicketPrice', movieTicketPrice);
@@ -29,14 +32,33 @@ function updateNumberAndPrice() {
 }
 //-----------------------------------------------------
 
+function populateUI() {
+  const selectedSeatsIndex = JSON.parse(
+    localStorage.getItem('selectedSeatsIndex')
+  );
+
+  if (selectedSeatsIndex !== null && selectedSeatsIndex.length > 0) {
+    seats.forEach(function (seat, index) {
+      if (selectedSeatsIndex.indexOf(index) > -1) {
+        seat.classList.add('selected');
+      }
+    });
+  }
+
+  const selectedMovieIndex = localStorage.getItem('selectedMovieIndex');
+  if (selectedMovieIndex !== null) {
+    movieSelect.selectedIndex = selectedMovieIndex;
+  }
+}
+
+//-----------------------------------------------------
+
 movieSelect.addEventListener('change', (e) => {
   ticketPrice = +e.target.value;
   updateNumberAndPrice();
 
   storeMovieData(e.target.selectedIndex, e.target.value); //tip
 });
-
-//-----------------------------------------------------
 
 seatsContainer.addEventListener('click', (e) => {
   if (
@@ -48,3 +70,6 @@ seatsContainer.addEventListener('click', (e) => {
 
   updateNumberAndPrice();
 });
+
+//to initial seat number and total price by reloading (based on sored data)
+updateNumberAndPrice(); //tip
