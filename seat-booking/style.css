@@ -2,7 +2,7 @@
 
 :root {
   --yellow: #fccf23;
-  --green: #47773b;
+  --violet: #52134b;
   --gray: rgb(82, 81, 81);
   --white: rgba(255, 255, 255, 0.856);
 }
@@ -89,7 +89,7 @@ small {
   width: 16px;
   border-top-left-radius: 5px;
   border-top-right-radius: 5px;
-  background-color: var(--green);
+  background-color: var(--violet);
   margin: 4px;
   /* border-bottom: solid 3px rgba(145, 144, 144, 0.664); */
 }
@@ -123,7 +123,7 @@ span {
 button {
   color: var(--white);
   height: 38px;
-  background-color: var(--green);
+  background-color: var(--violet);
   border: 0;
   cursor: pointer;
   border-radius: 5px;
