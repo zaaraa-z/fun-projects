@@ -91,7 +91,7 @@ small {
   border-top-right-radius: 5px;
   background-color: var(--green);
   margin: 4px;
-  border-bottom: solid 2px rgba(255, 255, 255, 0.664);
+  /* border-bottom: solid 3px rgba(145, 144, 144, 0.664); */
 }
 
 .seat.selected {
