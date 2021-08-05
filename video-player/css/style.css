@@ -1,0 +1,61 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background-color: black;
+  max-height: 100vh;
+}
+
+video {
+  cursor: pointer;
+  width: 85vw;
+  max-width: 600px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  border: solid 1px rgb(134, 134, 134);
+  border-bottom: 0;
+  margin-top: 20px;
+}
+
+.controls {
+  width: 85vw;
+  max-width: 600px;
+  background-color: #52134b;
+  padding: 5px;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: solid 1px rgb(134, 134, 134);
+  border-top: 0;
+
+  margin-bottom: 20px;
+}
+
+.controls .btn {
+  height: 25px;
+  width: 25px;
+  background-color: transparent;
+  border: 0;
+  color: white;
+  cursor: pointer;
+}
+
+.controls .btn:focus {
+  outline: 0;
+}
+
+.controls .progressbar {
+}
+
+.controls span {
+  color: white;
+  margin-left: 6px;
+}
