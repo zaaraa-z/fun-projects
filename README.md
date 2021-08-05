@@ -10,7 +10,9 @@ HTML5, CSS3, JS
 
 2- Seat Booking: a UI to reserve seats in a simulated cinema plan and get the total price based on the selected movie (these are the four movies  I really enjoy watching!). My challenge here was to save data in localStorage to have them back in every page reloading. 
 
-3- Video Player: I am working on it!. 
+3- Video Player: a practice to customize <video> in html file without using "controls" attribute.
+
+4- Currency Converter: I am working on it!
 
 
 ## Contact
