@@ -46,13 +46,15 @@ video {
   border: 0;
   color: white;
   cursor: pointer;
+  transition: 0.4s;
+}
+.controls .btn:hover {
+  color: #fccf23;
+  transition: 0.4s;
 }
 
 .controls .btn:focus {
   outline: 0;
-}
-
-.controls .progressbar {
 }
 
 .controls span {
