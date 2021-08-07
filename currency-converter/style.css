@@ -1,0 +1,110 @@
+@import url('https://fonts.googleapis.com/css2?family=Livvic:ital,wght@1,300&display=swap');
+
+:root {
+  --violet: #52134b;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+body {
+  background-color: rgb(192, 190, 190);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  height: 100vh;
+  font-family: 'Livvic', sans-serif;
+  padding: 20px;
+}
+
+/*--------------------------------*/
+img {
+  width: 110px;
+  margin-bottom: 15px;
+}
+
+h2 {
+  color: var(--violet);
+}
+p {
+  color: var(--violet);
+  font-weight: 600;
+  text-align: center;
+  margin: 35px 0 10px 0;
+}
+
+/*--------------------------------*/
+.container {
+  max-width: 220px;
+}
+
+.currency-amount {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 20px 0;
+}
+
+.currency-amount select,
+.currency-amount input {
+  padding: 7px 12px;
+  border-radius: 4px;
+  border: 0;
+  font-size: 15px;
+}
+.currency-amount input {
+  max-width: 68%;
+  text-align: right;
+}
+
+.currency-amount select {
+  text-align: left;
+  appearance: none;
+  background-image: url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22292.4%22%20height%3D%22292.4%22%3E%3Cpath%20fill%3D%22%20000002%22%20d%3D%22M287%2069.4a17.6%2017.6%200%200%200-13-5.4H18.4c-5%200-9.3%201.8-12.9%205.4A17.6%2017.6%200%200%200%200%2082.2c0%205%201.8%209.3%205.4%2012.9l128%20127.9c3.6%203.6%207.8%205.4%2012.8%205.4s9.2-1.8%2012.8-5.4L287%2095c3.5-3.5%205.4-7.8%205.4-12.8%200-5-1.9-9.2-5.5-12.8z%22%2F%3E%3C%2Fsvg%3E');
+  background-position: right 8px top 50%;
+  background-size: 10px;
+  background-repeat: no-repeat;
+  padding-right: 18px;
+}
+
+/*--------------------------------*/
+.swap-rate {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.swap-rate button {
+  background-color: var(--violet);
+  color: white;
+  padding: 8px 16px;
+  border: 0;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 15px;
+  transition: 0.4s;
+}
+.swap-rate button:hover {
+  background-color: #fcce00;
+  color: var(--violet);
+  transition: 0.4s;
+}
+.swap-rate button:focus,
+.currency-amount select:focus,
+.currency-amount input:focus {
+  outline: 0;
+}
+
+.swap-rate #rate {
+  color: var(--violet);
+  max-width: 70%;
+  text-align: right;
+  font-weight: 600;
+  font-size: 12px;
+  border: solid 1px var(--violet);
+  padding: 7px 10px;
+  border-radius: 4px;
+}
