@@ -12,7 +12,7 @@ HTML5, CSS3, JS
 
 3- Video Player: a practice to customize "video" tag in html file without using "controls" attribute.
 
-4- Currency Converter: I am working on it!
+4- Currency Converter: a UI to convert currencies by fetching data.
 
 
 ## Contact
