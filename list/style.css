@@ -73,6 +73,7 @@ h3#title {
   padding-bottom: 7px;
   display: flex; /*tip*/
   justify-content: space-between;
+  margin-bottom: 10px;
 }
 
 .person {
@@ -80,6 +81,12 @@ h3#title {
   justify-content: space-between;
   font-size: 13px;
   margin-bottom: 10px;
+  padding-bottom: 10px;
+  border-bottom: solid 1px;
+  cursor: pointer;
+}
+.person.remove {
+  display: none;
 }
 
 h3#result {

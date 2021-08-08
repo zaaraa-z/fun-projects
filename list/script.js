@@ -1,3 +1,4 @@
+const main = document.getElementById('main');
 const addBtn = document.getElementById('add');
 const sortBtn = document.getElementById('sort');
 const filterBtn = document.getElementById('filter');
@@ -5,17 +6,16 @@ const doubleBtn = document.getElementById('double');
 const calculateBtn = document.getElementById('calculate');
 let data = [];
 
-//functions ------------------------------
-function add(userObj) {
-  data.push(userObj);
-}
+createRandomUserAndWealth();
+createRandomUserAndWealth();
+createRandomUserAndWealth();
 
-//fetch random user and add their wealth ------------------------------
+//functions ------------------------------
 async function createRandomUserAndWealth() {
   //tip
   const res = await fetch('https://randomuser.me/api');
-  const data = await res.json();
-  const fetchedUserArr = data.results[0];
+  const fetchedData = await res.json();
+  const fetchedUserArr = fetchedData.results[0];
   const newUser = {
     user: `${fetchedUserArr.name.first} ${fetchedUserArr.name.last}`,
     wealth: Math.floor(Math.random() * 1000000),
@@ -24,9 +24,35 @@ async function createRandomUserAndWealth() {
   add(newUser);
 }
 
-//event listeners ------------------------------
-function showNewUsers() {
-    data.forEach(element => {
-        
-    });
+function doubleWealth() {
+  data = data.map((item) => {
+    return { ...item, wealth: item.wealth * 2 };
+  });
+  updateList();
 }
+
+function add(userObj) {
+  data.push(userObj);
+  updateList();
+}
+
+function updateList(updatedData = data) {
+  main.innerHTML = '<h3 id="title">People<strong> Wealth</strong></h3>';
+  updatedData.forEach((item) => {
+    const element = document.createElement('div');
+    element.classList.add('person');
+    element.innerHTML = `<strong>${item.user}</strong><strong>${formatMoney(
+      item.wealth
+    )}</strong>`;
+    main.appendChild(element);
+  });
+}
+
+function formatMoney(number) {
+  return '$ ' + number.toFixed(2).replace(/\B(?=(\d{3})+(?!\d))/g, ',');
+}
+
+//event listeners ------------------------------
+addBtn.addEventListener('click', createRandomUserAndWealth);
+doubleBtn.addEventListener('click', doubleWealth);
+sortBtn.addEventListener('click', sort);
