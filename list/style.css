@@ -15,7 +15,7 @@ body {
 .container {
   display: flex;
   padding: 30px;
-  width: 800px; /*tip*/
+  width: 600px; /*tip*/
   max-width: 100%; /*tip*/
 }
 
@@ -45,6 +45,7 @@ button:hover {
 
 aside button i {
   margin-right: 8px;
+  color: rgb(121, 3, 91);
 }
 
 @media only screen and (max-width: 470px) {
@@ -83,15 +84,15 @@ h3#title {
   margin-bottom: 10px;
   padding-bottom: 10px;
   border-bottom: solid 1px;
-  cursor: pointer;
 }
-.person.remove {
-  display: none;
+.person strong,
+.person span {
+  color: rgb(121, 3, 91);
 }
 
-h3#result {
-  border-bottom: solid 1px;
+h5#result {
   margin: 20px 0;
+  padding: 10px 5px;
   display: flex;
   justify-content: space-between;
   background-color: white;
