@@ -12,7 +12,9 @@ HTML5, CSS3, JS
 
 3- Video Player: a practice to customize "video" tag in html file without using "controls" attribute.
 
-4- Currency Converter: a UI to convert currencies by fetching data.
+4- Currency Converter: a UI to convert currencies by fetching data. 
+
+5-List: a practice to create a list of persons with their wealth using fetch API, and then sorting them, adding to the list, calculating the total wealth, etc.
 
 
 ## Contact
