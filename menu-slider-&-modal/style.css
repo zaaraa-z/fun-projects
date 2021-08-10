@@ -1,0 +1,11 @@
+:root {
+  --yellow: #fcce00;
+  --violet: #52134b;
+}
+
+body {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+

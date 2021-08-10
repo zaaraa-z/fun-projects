@@ -14,6 +14,103 @@
   </head>
 
   <body>
+    <nav>
+      <div class="user-pic">
+        <img
+          src="https://randomuser.me/api/portraits/women/76.jpg"
+          alt="random user"
+        />
+      </div>
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Portfolio</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </nav>
+
+    <header>
+      <button id="toggle-btn"><i class="fas fa-bars fa-2x"></i></button>
+      <h1>Sample Page</h1>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quasi, quod!
+      </p>
+      <button id="modal-btn">Login</button>
+    </header>
+
+    <div class="container">
+      <h2>Introduction</h2>
+      <p>
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Modi suscipit
+        tempore esse nisi rerum assumenda dignissimos similique asperiores,
+        sapiente sunt, eos repellat? Illum, mollitia placeat nesciunt nisi
+        perferendis aut delectus.
+      </p>
+      <p>
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nam rerum eius
+        dolorem consequatur omnis aperiam assumenda nihil, possimus ab unde
+        quam, obcaecati fugit, maxime perferendis.
+      </p>
+      <h2>Projects</h2>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo consequatur
+        exercitationem maiores vitae. Culpa laudantium et, laborum reprehenderit
+        adipisci autem, aspernatur hic eveniet deserunt totam iusto quisquam
+        voluptatibus debitis nostrum consequatur fugiat id unde ullam facere
+        iure maiores. Ad perferendis quaerat aut eligendi iure iusto vitae alias
+        quam quas possimus.
+      </p>
+      <h2>Features</h2>
+      <ul>
+        <li>Tailored Customer Support</li>
+        <li>Detailed Design</li>
+        <li>Responsive development</li>
+      </ul>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit,
+        temporibus! Consequuntur, asperiores laborum. Dolore, nihil incidunt
+        iusto cum molestias maiores!
+      </p>
+    </div>
+
+    <div class="modal-container" id="modal-container">
+      <div class="modal-header">
+        <button id="close"><i class="fas fa-times"></i></button>
+        <h3>Login Here</h3>
+      </div>
+      <div class="modal-content">
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi,
+          doloremque ab repudiandae neque ipsa fuga.
+        </p>
+        <form>
+          <div>
+            <label for="username">Username</label>
+            <input type="text" id="username" placeholder="Enter Username" />
+          </div>
+          <div>
+            <label for="email">Email</label>
+            <input type="email" id="email" placeholder="Enter Email" />
+          </div>
+          <div>
+            <label for="password">Password</label>
+            <input type="password" id="password" placeholder="Enter Password" />
+          </div>
+          <div>
+            <label for="password-repeat">Repeat Password</label>
+            <input
+              type="password"
+              id="password-repeat"
+              placeholder="Enter Password Again"
+            />
+          </div>
+
+          <input type="submit" value="Login!" id="login-btn" />
+          <!--tip-->
+        </form>
+      </div>
+    </div>
+
     <script src="script.js"></script>
   </body>
 </html>
