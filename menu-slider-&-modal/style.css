@@ -67,6 +67,17 @@ header {
   padding: 30px;
   position: relative;
 }
+header h1 {
+  font-size: 45px;
+  background: linear-gradient(
+    94.23deg,
+    #ffca07 36.41%,
+    #fff3c7 47.55%,
+    #e600f5 65.95%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
 
 #toggle-btn {
   position: absolute;
