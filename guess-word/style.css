@@ -1,0 +1,62 @@
+:root {
+  --white: #cacaca;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: rgb(38, 1, 43);
+  color: var(--white);
+  font-family: Arial, Helvetica, sans-serif;
+  padding: 10vh 0;
+}
+h1,
+h5,
+p {
+  text-align: center;
+}
+
+h1 {
+  margin: 0;
+}
+h5 {
+  margin-top: 10px;
+  margin-bottom: 30px;
+}
+
+.text-container {
+  margin: 0 20px;
+}
+
+p {
+  font-size: 14px;
+  line-height: 20px;
+  border: solid 1px;
+  padding: 25px 15px;
+  border-radius: 10px;
+  max-width: 600px;
+  margin: auto;
+}
+span {
+  color: #fcce00;
+}
+
+.game-container {
+  text-align: center;
+  margin-top: 30px;
+}
+
+/* svg {
+  fill: var(--white);
+  stroke: var(--white);
+  stroke-width: 4px;
+  stroke-linecap: round;
+} */
+
+@media only screen and (min-width: 600px) {
+  svg {
+    /* width: 80vw; */
+  }
+}
