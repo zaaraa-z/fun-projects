@@ -33,11 +33,14 @@ h5 {
 p {
   font-size: 14px;
   line-height: 20px;
+
+  margin: auto;
+}
+p#text {
   border: solid 1px;
   padding: 25px 15px;
   border-radius: 10px;
   max-width: 600px;
-  margin: auto;
 }
 span {
   color: #fcce00;
@@ -45,7 +48,12 @@ span {
 
 .game-container {
   text-align: center;
-  margin-top: 30px;
+  width: 85vw;
+  height: 70vh;
+  margin: 30px auto;
+  background: url(img/bg.svg) center center no-repeat;
+  background-size: contain;
+  position: relative;
 }
 
 /* svg {
@@ -55,8 +63,45 @@ span {
   stroke-linecap: round;
 } */
 
-@media only screen and (min-width: 600px) {
-  svg {
-    /* width: 80vw; */
-  }
+svg {
+  height: 100%;
+}
+
+svg .petal {
+}
+
+/* .wrong-and-letters-conteiner {
+  margin: 40px auto;
+  width: 80vw;
+  max-width: 370px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+} */
+
+.wrong {
+  position: absolute;
+  top: 30px;
+  right: 0;
+  background-color: rgba(255, 255, 255, 0.215);
+  padding: 20px;
+  border-radius: 5px;
+}
+.wrong p {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+.letters {
+  margin-top: 15px;
+}
+.letters span {
+  font-size: 20px;
+  border-bottom: solid 2px;
+  margin: 0 2px;
+  padding: 0 10px;
+}
+
+.final-popup-container,
+.notification-container {
+  display: none;
 }
