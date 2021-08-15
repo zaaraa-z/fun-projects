@@ -8,14 +8,38 @@
   box-sizing: border-box;
 }
 
+@keyframes drop {
+  0% {
+    transform-origin: center;
+    opacity: 1;
+  }
+  20% {
+    transform: translate3d(0, 20px, 0) rotate3d(0, 0, 1, -10deg);
+    opacity: 1;
+  }
+  40%,
+  45% {
+    transform: translate3d(0, -20px, 0) rotate3d(0, 0, 1, 20deg);
+    opacity: 0.9;
+  }
+  70% {
+    transform: translate3d(0, 200px, 0) rotate3d(0, 10, 1, 40deg);
+    opacity: 0.8;
+  }
+  to {
+    transform: translate3d(0, 400px, 0) rotate3d(0, 4, 0, 80deg);
+    opacity: 0;
+  }
+}
+
 body {
   background-color: var(--violet);
   color: var(--white);
   font-family: Arial, Helvetica, sans-serif;
-  padding: 12vh 0;
+  padding-top: 6vh;
+  padding-bottom: 12vh;
   margin: 0;
   position: relative;
-  /* overflow: hidden; */
 }
 h1,
 h5,
@@ -43,7 +67,7 @@ p {
 }
 p#text {
   border: solid 1px;
-  padding: 25px 15px;
+  padding: 15px;
   border-radius: 10px;
   max-width: 600px;
 }
@@ -55,31 +79,27 @@ span {
   text-align: center;
   width: 85vw;
   max-width: 600px;
-  height: 70vh;
-  margin: 30px auto;
+  height: 55vh;
+  margin: 12px auto;
   background: url(img/bg.svg) center center no-repeat;
   background-size: contain;
   position: relative;
 }
 
-/* svg {
-  fill: var(--white);
-  stroke: var(--white);
-  stroke-width: 4px;
-  stroke-linecap: round;
-} */
-
 svg {
-  height: 100%;
+  height: 93%;
 }
 
-svg .petal {
+svg .petal.drop {
+  animation: drop 1.2s forwards;
 }
 
 .wrong {
   position: absolute;
   top: 30px;
   right: 0;
+}
+.wrong-info-container {
   background-color: rgba(255, 255, 255, 0.215);
   padding: 14px;
   border-radius: 5px;
@@ -89,6 +109,7 @@ svg .petal {
   margin-bottom: 10px;
 }
 .wrong span {
+  text-transform: uppercase;
   font-size: 13px;
 }
 .letters {
@@ -153,9 +174,10 @@ button:focus {
   padding: 10px;
   border-radius: 10px 10px 0 0;
   display: inline-block;
-  transition: transform 0.6 ease-in-out; /*tip*/
+  transition: transform 1s ease-in-out; /*tip*/
 }
 
 .notification-container.show {
   transform: translate(-50%, -40px);
+  transition: transform 1s ease-in-out; /*tip*/
 }
