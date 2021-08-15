@@ -108,7 +108,6 @@ playAgainBtn.addEventListener('click', () => {
   wrongLetters.splice(0);
   correctLetters.splice(0);
   selectedWord = wordArr[Math.floor(Math.random() * wordArr.length)];
-  // wrong.innerHTML = '';
   updateWrongSec();
   placeWord();
 });

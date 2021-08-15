@@ -1,0 +1,72 @@
+:root {
+  --red: rgb(82, 32, 32);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  padding: 7vh 0;
+  min-height: 100vh;
+  background-color: rgb(196, 170, 170);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: var(--red);
+  margin: 0;
+  display: flex;
+  direction: column;
+  justify-content: center;
+}
+
+button:focus,
+input:focus {
+  outline: 0;
+}
+
+/*search section---------------------------------------------*/
+.form-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+h1 {
+  text-align: center;
+  border-bottom: solid 2px white;
+  padding-bottom: 8px;
+}
+
+form input {
+  border: solid 1px var(--red);
+  border-right: 0;
+  padding: 10px;
+  border-radius: 5px 0 0 5px;
+  color: var(--red);
+  font-size: 16px;
+  font-weight: 600;
+  width: 65vw;
+  max-width: 300px;
+}
+button {
+  border: solid 1px var(--red);
+  padding: 9px;
+  font-size: 17px;
+  cursor: pointer;
+  transition: 0.6s;
+  background-color: var(--red);
+  color: white;
+  border-radius: 0 5px 5px 0;
+}
+button:hover {
+  background-color: white;
+  color: var(--red);
+  transition: 0.6s;
+}
+button#search-btn {
+  margin: 0 10px 0 -5px;
+}
+
+button#random-btn {
+  border-radius: 5px;
+}
+
+/*result section---------------------------------------------*/

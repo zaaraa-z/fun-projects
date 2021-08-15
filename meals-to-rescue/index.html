@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.7.0/css/all.css"
+      integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>Meals To Rescue!</title>
+  </head>
+
+  <body>
+    <div class="search-container">
+      <h1>Meals To Rescue!</h1>
+      <div class="form-container">
+        <form>
+          <input type="search" id="search-input" placeholder="Search..." />
+          <button type="sybmit" id="search-btn">
+            <i class="fas fa-search"></i>
+          </button>
+        </form>
+        <button type="submit" id="random-btn">
+          <i class="fas fa-random"></i>
+        </button>
+      </div>
+    </div>
+
+    <div class="result-container">
+      <div id="result-header"></div>
+      <div id="result-meals"></div>
+      <div id="result-single-meal"></div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
