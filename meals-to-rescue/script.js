@@ -11,6 +11,7 @@ function searchMeals(e) {
 
   //clear previous searched items on screen
   resultMeals.innerHTML = '';
+  resultHeading.innerHTML = '';
 
   let searchedWord = searchInput.value;
   if (searchedWord.trim()) {
