@@ -14,8 +14,9 @@ body {
   color: var(--red);
   margin: 0;
   display: flex;
-  direction: column;
-  justify-content: center;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
 }
 
 button:focus,
@@ -70,3 +71,32 @@ button#random-btn {
 }
 
 /*result section---------------------------------------------*/
+.result-container {
+  text-align: center;
+  width: 80vw;
+  max-width: 800px;
+}
+
+#result-heading h3 {
+  background-color: #ffffff73;
+  padding: 10px 0;
+  margin-top: 40px;
+}
+
+#result-meals {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 20px;
+}
+
+#result-meals .meal {
+  cursor: pointer;
+  height: 170px;
+  width: 170px;
+}
+
+#result-meals img {
+  border-radius: 10px;
+  width: 100%;
+  height: 100%;
+}
