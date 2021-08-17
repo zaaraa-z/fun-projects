@@ -6,12 +6,13 @@ const searchInput = document.getElementById('search-input'),
   resultSinglemeal = document.getElementById('result-single-meal');
 
 //------------------------------------
+//------------------------------------
 function searchMeals(e) {
   e.preventDefault();
 
   //clear previous searched items on screen
+  resultSinglemeal.innerHTML = '';
   resultMeals.innerHTML = '';
-  resultHeading.innerHTML = '';
 
   let searchedWord = searchInput.value;
   if (searchedWord.trim()) {
@@ -45,8 +46,88 @@ function searchMeals(e) {
   }
 }
 
-function findRandomMeal() {}
+//------------------------------------
+function RandomMeal() {
+  resultMeals.innerHTML = '';
+  resultHeading.innerHTML = '';
+
+  fetch(`https://themealdb.com/api/json/v1/1/random.php`)
+    .then((res) => res.json())
+    .then((data) => {
+      const randomMeal = data.meals[0];
+      displayMealInfo(randomMeal);
+    });
+}
 
 //------------------------------------
+function getClickedMealID(e) {
+  const clickedMealTitle = e.path.find((item) => {
+    if (item.classList) {
+      return item.classList.contains('meal-title');
+    } else {
+      return false;
+    }
+  });
+
+  if (clickedMealTitle) {
+    const clickedMealID = clickedMealTitle.getAttribute('data-mealID');
+    fetchSingleMealInfoByID(clickedMealID);
+  }
+}
+
+//------------------------------------
+function fetchSingleMealInfoByID(mealID) {
+  fetch(`https://themealdb.com/api/json/v1/1/lookup.php?i=${mealID}`)
+    .then((res) => res.json())
+    .then((data) => {
+      const mealInfoObj = data.meals[0];
+
+      displayMealInfo(mealInfoObj);
+      resultSinglemeal.scrollIntoView({ behavior: 'smooth' }); //tip: my idea!
+    });
+}
+
+//------------------------------------
+function displayMealInfo(meal) {
+  const ingredientsArr = [];
+  for (let i = 1; i <= 20; i++) {
+    if (meal[`strIngredient${i}`]) {
+      ingredientsArr.push(
+        `${meal[`strIngredient${i}`]}  - ${
+          meal[`strMeasure${i}`] ? meal[`strMeasure${i}`] : ''
+        }`
+      );
+    } else {
+      break;
+    }
+  }
+
+  resultSinglemeal.innerHTML = `
+  <div class="single-meal">
+    <h4>${meal.strMeal}</h4>
+    <img src="${meal.strMealThumb}" alt="${meal.strMeal}">
+    <div class="single-meal-type-origin">
+      ${
+        meal.strCategory
+          ? `<p>This Meal category is ${meal.strCategory}</p>`
+          : ''
+      }
+      ${meal.strArea ? `<p>This Meal is ${meal.strArea}</p>` : ''}    
+    </div>
+
+    <div class="single-meal-main">
+      <p>${meal.strInstructions}</p>
+      <h4>Ingredients:</h4>
+      <ul>
+        ${ingredientsArr.map((ing) => `<li>${ing}</li>`).join('')}
+      </ul>
+    </div>
+  </div>
+  `;
+}
+
+//------------------------------------
+//------------------------------------
 submitSearch.addEventListener('submit', searchMeals);
-randomBtn.addEventListener('click', findRandomMeal);
+randomBtn.addEventListener('click', RandomMeal);
+resultMeals.addEventListener('click', getClickedMealID);
