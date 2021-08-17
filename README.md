@@ -20,7 +20,9 @@ HTML5, CSS3, JS
 
 7- "Guess Word" game (a fun version of Hangman game): I tought, well, "Hangman" is not a pleasant name, AT ALL. It is not a joke to play a game in which you are going to hang a man just like that! So, my challenge was to think of a more delightful graphic and less emotional one! I love gardening, so, I chose this! You will ruin my sunflower if you guess wrong letters. I can live with that though! Seriously! Watching a flower dying is not a big deal in comparison to take a human being life!
 
-8- Meals To Rescue!: I'm working on it!
+8- Meals To Rescue!: a web app to find out wat to cock when you are helpless! Just enter the food keyword and wait for the results. Then you can click on a special meal to see the recipe. There is also a random button whic is handy when you have no idea! 
+
+9- Shopping Review: I'm working on it!
 
 
 
