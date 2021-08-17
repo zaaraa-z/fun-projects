@@ -19,7 +19,6 @@ function searchMeals(e) {
     `)
       .then((res) => res.json())
       .then((data) => {
-        console.log(data);
         resultHeading.innerHTML = `<h3>Search Results for "${searchedWord}":</h3>`;
 
         if (data.meals === null) {
@@ -36,9 +35,11 @@ function searchMeals(e) {
               </div>
             </div>`
             )
-            .join('');
+            .join(''); //tip
         }
       });
+
+    searchInput.value = '';
   } else {
     alert('Please enter a search word');
   }
