@@ -30,12 +30,12 @@
       <div class="history-container section">
         <h5>TRANSACTION HISTORY</h5>
         <ul id="history-list">
-          <li class="expense">
+          <!-- <li class="expense">
             book<span>$400</span><button id="del-btn">x</button>
           </li>
           <li class="income">
             book<span>$400</span><button id="del-btn">x</button>
-          </li>
+          </li> -->
         </ul>
       </div>
 
@@ -44,16 +44,15 @@
         <form id="add-form">
           <div class="form-control">
             <label for="item-name">Item</label>
-            <input type="text" placeholder="Enter Item..." />
+            <input id="item" type="text" placeholder="Enter Item..." />
           </div>
 
           <div class="form-control">
             <label for="item-price"
               >Amount<br />
-
-              <span>(negative - expense, positive - income)</span></label
+              <span>(negative: expense | positive: income)</span></label
             >
-            <input type="number" placeholder="Enter Amount..." />
+            <input id="amount" type="number" placeholder="Enter Amount..." />
           </div>
 
           <button id="add-btn" type="submit">ADD TRANSACTION</button>
