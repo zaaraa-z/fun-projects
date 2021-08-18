@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="Zara Zamanian" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Expense Review</title>
+  </head>
+
+  <body>
+    <h2>Shopping Review</h2>
+    <div class="container">
+      <div class="section">
+        <h5>YOUR BALANCE</h5>
+        <h2 id="balance">$0.00</h2>
+
+        <div class="inc-exp-container">
+          <div>
+            <h4>INCOME</h4>
+            <p id="money-income" class="money income">+ $0.00</p>
+          </div>
+          <div>
+            <h4>EXPENSE</h4>
+            <p id="money-expense" class="money expense">- $0.00</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="history-container section">
+        <h5>TRANSACTION HISTORY</h5>
+        <ul id="history-list">
+          <li class="expense">
+            book<span>$400</span><button id="del-btn">x</button>
+          </li>
+          <li class="income">
+            book<span>$400</span><button id="del-btn">x</button>
+          </li>
+        </ul>
+      </div>
+
+      <div class="add-container section">
+        <h5>NEW TRANSACTION</h5>
+        <form id="add-form">
+          <div class="form-control">
+            <label for="item-name">Item</label>
+            <input type="text" placeholder="Enter Item..." />
+          </div>
+
+          <div class="form-control">
+            <label for="item-price"
+              >Amount<br />
+
+              <span>(negative - expense, positive - income)</span></label
+            >
+            <input type="number" placeholder="Enter Amount..." />
+          </div>
+
+          <button id="add-btn" type="submit">ADD TRANSACTION</button>
+        </form>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
