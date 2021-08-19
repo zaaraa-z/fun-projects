@@ -14,7 +14,7 @@ const initialTransactions = [
   { id: 4, text: 'apple', amount: 80 },
 ];
 
-const transactionItems = initialTransactions;
+let transactionItems = initialTransactions;
 
 //------------------------------------------------------
 function addNewTransaction(e) {
@@ -54,7 +54,7 @@ function displayTransactions(item) {
 
   liEl.innerHTML = `
   ${item.text}<span>${moneySign} $${Math.abs(item.amount)}</span>
-  <button id="del-btn" onclick="deleteTransaction()">x</button>
+  <button id="del-btn" onclick="deleteTransaction(${item.id})">x</button>
   </li>
   `;
 
@@ -65,8 +65,6 @@ function updateTotals() {
   //get all amounts
   const amountsArr = transactionItems.map((x) => x.amount);
 
-  console.log(amountsArr);
-
   //calculate expenses
   moneyExpense.innerText =
     '$' +
@@ -74,8 +72,7 @@ function updateTotals() {
       amountsArr
         .filter((item) => item < 0)
         .reduce((acc, item) => (acc += item), 0)
-        .toFixed(2)
-    );
+    ).toFixed(2);
 
   //calculate incomes
   moneyIncome.innerText =
@@ -86,14 +83,21 @@ function updateTotals() {
       .toFixed(2);
 
   //calculate total balance
+  const total = amountsArr.reduce((acc, item) => (acc += item), 0);
   balance.innerText =
-    '$' + amountsArr.reduce((acc, item) => (acc += item), 0).toFixed(2);
+    total >= 0 ? '$' + total.toFixed(2) : '- $' + Math.abs(total).toFixed(2);
 }
 //-----------------
-function deleteTransaction() {}
+//delete transaction by ID
+function deleteTransaction(id) {
+  transactionItems = transactionItems.filter((item) => item.id !== id);
+
+  init();
+}
+
 //------------------------------------------------------
 add.addEventListener('submit', addNewTransaction);
-
+//------------------------------------------------------
 function init() {
   historyList.innerHTML = '';
   transactionItems.forEach(displayTransactions);
