@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="Zara Zamanian" />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.7.0/css/all.css"
+      integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>Music Player</title>
+  </head>
+
+  <body>
+    <div class="heading-container">
+      <h2>Fun MusicPlayer</h2>
+      <p>Customized by Zara Zamanian</p>
+    </div>
+
+    <div class="music-container">
+      <div class="music-info">
+        <h4 id="music-title">music one</h4>
+        <div class="progressbar-container">
+          <div class="progressbar" id="progressbar"></div>
+        </div>
+      </div>
+
+      <audio src=""></audio>
+
+      <div class="cover-container">
+        <img src="img/01.jpg" alt="music cover" id="music-cover" />
+      </div>
+
+      <div class="navigation-container">
+        <button id="prev" class="nav-btn">
+          <i class="fas fa-backward"></i>
+        </button>
+        <button id="play" class="nav-btn">
+          <i class="fas fa-play"></i>
+        </button>
+        <button id="next" class="nav-btn">
+          <i class="fas fa-forward"></i>
+        </button>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
