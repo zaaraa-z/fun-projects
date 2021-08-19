@@ -4,17 +4,25 @@ const balance = document.getElementById('balance'),
   historyList = document.getElementById('history-list'),
   itemInput = document.getElementById('item'),
   amoutInput = document.getElementById('amount'),
-  deleteBtn = document.getElementById('del-btn'),
   add = document.getElementById('add-form');
 
-const initialTransactions = [
-  { id: 1, text: 'book', amount: 300 },
-  { id: 2, text: 'pencil', amount: -100 },
-  { id: 3, text: 'flower', amount: -250 },
-  { id: 4, text: 'apple', amount: 80 },
-];
+// const initialTransactions = [
+//   { id: 1, text: 'book', amount: 300 },
+//   { id: 2, text: 'pencil', amount: -100 },
+//   { id: 3, text: 'flower', amount: -250 },
+//   { id: 4, text: 'apple', amount: 80 },
+// ];
 
-let transactionItems = initialTransactions;
+// let transactionItems = initialTransactions;
+
+let localStorageTransactions = JSON.parse(
+  localStorage.getItem('transactionHistory')
+);
+
+let transactionItems =
+  localStorage.getItem('transactionHistory') !== null
+    ? localStorageTransactions
+    : [];
 
 //------------------------------------------------------
 function addNewTransaction(e) {
@@ -35,7 +43,11 @@ function addNewTransaction(e) {
     transactionItems.push(newTransaction);
 
     displayTransactions(newTransaction);
+
     updateTotals();
+
+    updateLocalStorage();
+
     itemInput.value = '';
     amoutInput.value = '';
   }
@@ -92,9 +104,14 @@ function updateTotals() {
 function deleteTransaction(id) {
   transactionItems = transactionItems.filter((item) => item.id !== id);
 
+  updateLocalStorage();
+
   init();
 }
-
+//-----------------
+function updateLocalStorage() {
+    localStorage.setItem('transactionHistory', JSON.stringify(transactionItems))
+}
 //------------------------------------------------------
 add.addEventListener('submit', addNewTransaction);
 //------------------------------------------------------
