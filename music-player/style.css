@@ -45,6 +45,7 @@ button:focus {
 .cover-container {
   width: 90px;
   position: relative;
+  z-index: 10;
 }
 
 .cover-container::after {
@@ -90,8 +91,20 @@ button:focus {
   align-items: center;
   justify-content: center;
   background-color: white;
-  z-index: 1;
 }
+
+/*hiding music info behind when it is stopped*/
+.navigation-container::before {
+  content: '';
+  background-color: white;
+  width: 220px;
+  height: 63px;
+  position: absolute;
+  top: 0;
+  right: 5px;
+  border-radius: 10px;
+}
+
 .navigation-container button {
   background-color: transparent;
   border: 0;
@@ -99,11 +112,12 @@ button:focus {
   font-size: 16px;
   margin: 0 20px;
   cursor: pointer;
-  transition: 0.5s;
+  transition: 0.3s;
+  z-index: 3;
 }
 .navigation-container button:hover {
   color: #7fffd4;
-  transition: 0.5s;
+  transition: 0.3s;
 }
 
 .navigation-container button#play {
@@ -125,7 +139,7 @@ button:focus {
   border-radius: 10px 10px 0 0;
   transform: translateY(0);
   transition: transform 0.4s ease-out, opacity 0.4s ease-out;
-  z-index: -1;
+  z-index: 0;
 }
 
 .music-container.play .music-info {

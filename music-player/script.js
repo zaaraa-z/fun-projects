@@ -54,6 +54,21 @@ function prevMusic() {
   playMusic();
 }
 
+//-----------------------
+function updateProgressbar() {
+  const progressbarPercentage = (progressbar.value =
+    (audio.currentTime / audio.duration) * 100);
+  progressbar.style.width = `${progressbarPercentage}%`;
+}
+
+//-----------------------
+function dragProgressbar(e) {
+  const width = this.clientWidth;
+  const clickedX = e.offsetX;
+
+  audio.currentTime = (audio.duration * clickedX) / width;
+}
+
 //---------------------------------------------------------------
 playBtn.addEventListener('click', () => {
   const isPlaying = musicContainer.classList.contains('play');
@@ -63,4 +78,7 @@ playBtn.addEventListener('click', () => {
 nextBtn.addEventListener('click', nextMusic);
 prevBtn.addEventListener('click', prevMusic);
 
-progressbar.addEventListener()
+audio.addEventListener('timeupdate', updateProgressbar);
+progressbarContainer.addEventListener('click', dragProgressbar);
+
+audio.addEventListener('ended', nextMusic);
