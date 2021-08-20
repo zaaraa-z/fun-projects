@@ -42,6 +42,56 @@ button:focus {
 }
 
 /*-------------------------------*/
+.music-notes {
+  color: white;
+  font-size: 16px;
+  display: none;
+}
+.note {
+  text-shadow: 0 2px 7px rgb(12, 224, 252);
+}
+.note:first-of-type {
+  position: absolute;
+  left: 20px;
+  top: -30px;
+  transform: rotate(10deg);
+}
+.note:nth-of-type(2) {
+  position: absolute;
+  left: 0px;
+  top: -45px;
+  transform: rotate(-10deg);
+}
+.note:last-of-type {
+  position: absolute;
+  top: -60px;
+}
+
+.note {
+  animation: notes 3s infinite;
+  animation-timing-function: linear;
+  opacity: 0;
+}
+
+.music-container.play .music-notes {
+  display: block;
+}
+
+@keyframes notes {
+  0% {
+    font-size: 20px;
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    font-size: 35px;
+    margin-top: -70px;
+    opacity: 0;
+  }
+}
+/*-------------------------------*/
 .cover-container {
   width: 90px;
   position: relative;
