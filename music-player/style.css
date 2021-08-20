@@ -39,7 +39,6 @@ button:focus {
   display: flex;
   position: relative;
   padding: 20px;
-  z-index: 3;
 }
 
 /*-------------------------------*/
@@ -90,12 +89,12 @@ button:focus {
   display: flex;
   align-items: center;
   justify-content: center;
-  z-index: 5;
   background-color: white;
+  z-index: 1;
 }
 .navigation-container button {
-  border: 0;
   background-color: transparent;
+  border: 0;
   color: rgb(209, 209, 209);
   font-size: 16px;
   margin: 0 20px;
@@ -122,11 +121,11 @@ button:focus {
   height: 50px;
   font-size: 13px;
   background-color: rgba(255, 255, 255, 0.4);
-  /* opacity: 0; */
+  opacity: 0;
   border-radius: 10px 10px 0 0;
   transform: translateY(0);
   transition: transform 0.4s ease-out, opacity 0.4s ease-out;
-  z-index: 0;
+  z-index: -1;
 }
 
 .music-container.play .music-info {
