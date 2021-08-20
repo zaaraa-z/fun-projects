@@ -22,7 +22,12 @@ HTML5, CSS3, JS
 
 8- Meals To Rescue!: a web app to find out wat to cock when you are helpless! Just enter the food keyword and wait for the results. Then you can click on a special meal to see the recipe. There is also a random button whic is handy when you have no idea! 
 
-9- Shopping Review: I'm working on it!
+9- Expense Review: an app to keep track of your expenses and incomes.
+
+10- Music Player: a very fun app to play music with cute animations!
+
+11- Infinite Scrolling (fetch/load data on scroll): I'm working on it!
+
 
 
 
