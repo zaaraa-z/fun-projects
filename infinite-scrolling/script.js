@@ -52,8 +52,19 @@ function showMore() {
 
 //--------------------
 function searchPosts(e) {
-  const typedData = e.target.value;
-  
+  const typedData = e.target.value.toUpperCase();
+  const postArr = document.querySelectorAll('.post');
+
+  postArr.forEach((post) => {
+    const postTitle = post.querySelector('.post-title').innerText.toUpperCase();
+    const postText = post.querySelector('.post-text').innerText.toUpperCase();
+
+    if (postTitle.indexOf(typedData) > -1 || postText.indexOf(typedData) > -1) {
+      post.style.display = 'block';
+    } else {
+      post.style.display = 'none';
+    }
+  });
 }
 
 //------------------------------------------------------
@@ -61,7 +72,7 @@ showPosts();
 
 window.addEventListener('scroll', () => {
   const { scrollTop, scrollHeight, clientHeight } = document.documentElement;
-  if (scrollTop + clientHeight >= scrollHeight - 5) {
+  if (scrollTop + clientHeight >= scrollHeight) {
     showMore();
   }
 });
