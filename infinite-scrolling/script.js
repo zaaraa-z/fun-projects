@@ -1,6 +1,6 @@
 const searchInput = document.getElementById('search-input'),
   postContainer = document.getElementById('posts-container'),
-  loader = document.querySelector('loader');
+  loader = document.querySelector('.loader');
 
 let postLimit = 3;
 let page = 1;
@@ -18,7 +18,6 @@ async function getPosts() {
 //--------------------
 async function showPosts() {
   const postArr = await getPosts();
-  console.log(postArr);
 
   postArr.forEach((post) => {
     const postEl = document.createElement('div');
@@ -35,5 +34,36 @@ async function showPosts() {
   });
 }
 
+//--------------------
+function showMore() {
+  //show loader for 1s
+  loader.classList.add('show');
+
+  setTimeout(() => {
+    loader.classList.remove('show');
+
+    //show next page after 3s
+    setTimeout(() => {
+      page++;
+      showPosts();
+    }, 300);
+  }, 1000);
+}
+
+//--------------------
+function searchPosts(e) {
+  const typedData = e.target.value;
+  
+}
+
 //------------------------------------------------------
 showPosts();
+
+window.addEventListener('scroll', () => {
+  const { scrollTop, scrollHeight, clientHeight } = document.documentElement;
+  if (scrollTop + clientHeight >= scrollHeight - 5) {
+    showMore();
+  }
+});
+
+searchInput.addEventListener('input', searchPosts);
