@@ -26,7 +26,7 @@ HTML5, CSS3, JS
 
 10- Music Player: a very fun app to play music with cute animations!
 
-11- Infinite Scrolling (fetch/load data on scroll): a template for blog or news site in which more data will be fetched when you are scrolling dow. You can also search in loaded data for a special letter, word or sentence; whatever you type, the DOM will filter the data based on that.
+11- Infinite Scrolling (fetch/load data on scroll): a template for blog or news website in which more data will be fetched when you are scrolling down. You can also search in loaded data for a special letter, word or sentence; whatever you type, the DOM will filter the data based on that.
 
 12- "Type It Fast" game: I'm working on it!
 
