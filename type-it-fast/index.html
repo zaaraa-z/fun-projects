@@ -15,7 +15,7 @@
   </head>
 
   <body>
-    <button id="setting-btn">
+    <button id="setting-btn" onclick="showSetting()">
       <i class="fas fa-cog"></i>
     </button>
 
@@ -45,7 +45,11 @@
 
       <small>Type the following:</small>
       <h1 id="word">zara</h1>
-      <input type="text" placeholder="Type the word here..." />
+      <input
+        type="text"
+        id="entered-text"
+        placeholder="Type the word here..."
+      />
 
       <div class="end-game" id="end-game">
         <!-- <h2>Time ran out</h2>
