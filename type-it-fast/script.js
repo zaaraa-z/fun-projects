@@ -41,10 +41,6 @@ let difficulty =
 
 difficultyStatus.value = difficulty;
 
-console.log(difficulty);
-console.log(difficultyStatus.value);
-console.log(difficultyStatus);
-
 //---------------------------------------------------
 enteredTextInput.focus();
 
