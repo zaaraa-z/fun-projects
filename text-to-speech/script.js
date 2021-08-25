@@ -1,7 +1,8 @@
 const textBoxBtn = document.getElementById('text-box-btn'),
-  textBox = document.querySelector('textarea'),
+  textarea = document.querySelector('textarea'),
   closeBtn = document.getElementById('close-btn'),
   textBoxContainer = document.getElementById('text-box-container'),
+  textBox = document.getElementById('text-box'),
   readBtn = document.getElementById('read-btn'),
   voiceOptions = document.getElementById('voice-options'),
   samplesContainer = document.getElementById('smaples-container');
@@ -73,9 +74,9 @@ data.forEach((item) => {
 
 //-----------------------------------------------------------
 closeBtn.addEventListener('click', () => {
-  textBoxContainer.style.display = 'none';
+  textBoxContainer.classList.toggle('show');
 });
 
 textBoxBtn.addEventListener('click', () => {
-  textBoxContainer.style.display = 'block';
+  textBoxContainer.classList.toggle('show');
 });
