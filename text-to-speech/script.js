@@ -2,7 +2,6 @@ const textBoxBtn = document.getElementById('text-box-btn'),
   textarea = document.querySelector('textarea'),
   closeBtn = document.getElementById('close-btn'),
   textBoxContainer = document.getElementById('text-box-container'),
-  textBox = document.getElementById('text-box'),
   readBtn = document.getElementById('read-btn'),
   voiceOptions = document.getElementById('voice-options'),
   samplesContainer = document.getElementById('smaples-container');
@@ -59,6 +58,7 @@ const data = [
 ];
 
 //-----------------------------------------------------------
+//show images and their related sentences
 data.forEach((item) => {
   const { image, text } = item;
 
@@ -72,11 +72,28 @@ data.forEach((item) => {
   samplesContainer.appendChild(sampleDiv);
 });
 
+//get and show voices
+voices = [];
+
+function getVoices() {
+  voices = SpeechSynthesis.getVoices();
+  voices.forEach((voice) => {
+    const optionEl = document.createElement('option');
+    optionEl.value = voice.name;
+    optionEl.innerText = `${voice.name} ${voice.lang}`;
+    voiceOptions.appendChild(optionEl);
+  });
+}
+
 //-----------------------------------------------------------
+speechSynthesis.addEventListener('voiceschanged', getVoices);
+
 closeBtn.addEventListener('click', () => {
-  textBoxContainer.classList.toggle('show');
+  textBoxContainer.classList.remove('show');
 });
 
 textBoxBtn.addEventListener('click', () => {
-  textBoxContainer.classList.toggle('show');
+  textBoxContainer.classList.add('show');
 });
+
+getVoices();

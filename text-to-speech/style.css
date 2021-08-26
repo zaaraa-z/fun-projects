@@ -57,6 +57,7 @@ h2 {
   margin: 30px auto 10px auto;
 }
 
+/* 
 #text-box-container {
   display: none;
   position: fixed;
@@ -69,6 +70,20 @@ h2 {
 }
 #text-box-container.show {
   display: block;
+} */
+#text-box-container {
+  position: fixed;
+  top: -1000px;
+  left: 0;
+  right: 0;
+  z-index: 2;
+  transition: all 1s ease-out;
+}
+
+#text-box-container.show {
+  top: 0;
+  bottom: 0;
+  backdrop-filter: blur(3px);
 }
 
 #text-box {
@@ -84,6 +99,11 @@ h2 {
   border-radius: 10px;
   position: relative;
   top: 50%;
+  /* transform: translate(0, -50%); */
+  transform: translate(0, -1000px);
+  transition: transform 0.5s ease-in;
+}
+#text-box-container.show #text-box {
   transform: translate(0, -50%);
 }
 
@@ -133,7 +153,14 @@ select {
 .sample {
   position: relative;
   cursor: pointer;
+  box-shadow: 0 3px 10px black;
+  transition: 0.3s;
 }
+.sample:hover {
+  box-shadow: none;
+  transition: 0.3s;
+}
+
 .sample img {
   border-radius: 10px;
   width: 100%;
