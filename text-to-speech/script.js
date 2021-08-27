@@ -58,24 +58,45 @@ const data = [
 ];
 
 //-----------------------------------------------------------
-//show images and their related sentences
+//show images + related sentences------------
 data.forEach((item) => {
   const { image, text } = item;
 
-  const sampleDiv = document.createElement('div');
-  sampleDiv.classList.add('sample');
-  sampleDiv.innerHTML = `
+  const sample = document.createElement('div');
+  sample.classList.add('sample');
+  sample.innerHTML = `
   <img src="${image}" alt="${text}"></img>
   <p>${text}</p>
   `;
+  samplesContainer.appendChild(sample);
 
-  samplesContainer.appendChild(sampleDiv);
+  //click event on every sample
+  sample.addEventListener('click', () => {
+    setTextMessage(text);
+    speakTextMessage();
+
+    sample.classList.add('active');
+    setTimeout(() => {
+      sample.classList.remove('active');
+    }, 1300);
+  });
 });
 
-//get and show voices
+//speech functions--------------------------
+const message = new SpeechSynthesisUtterance();
+
+function setTextMessage(text) {
+  message.text = text;
+}
+
+function speakTextMessage() {
+  speechSynthesis.speak(message);
+}
+
+//get and show voices--------------------------
 voices = [];
 
-function getVoices() {
+function populateVoiceArr() {
   voices = SpeechSynthesis.getVoices();
   voices.forEach((voice) => {
     const optionEl = document.createElement('option');
@@ -86,7 +107,7 @@ function getVoices() {
 }
 
 //-----------------------------------------------------------
-speechSynthesis.addEventListener('voiceschanged', getVoices);
+speechSynthesis.addEventListener('voiceschanged', populateVoiceArr);
 
 closeBtn.addEventListener('click', () => {
   textBoxContainer.classList.remove('show');
@@ -96,4 +117,4 @@ textBoxBtn.addEventListener('click', () => {
   textBoxContainer.classList.add('show');
 });
 
-getVoices();
+populateVoiceArr();

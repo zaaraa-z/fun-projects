@@ -155,10 +155,18 @@ select {
   cursor: pointer;
   box-shadow: 0 3px 10px black;
   transition: 0.3s;
+  border: solid 2px transparent;
+  border-radius: 11px 11px 0 0;
 }
 .sample:hover {
   box-shadow: none;
   transition: 0.3s;
+}
+
+.sample.active {
+  box-shadow: none;
+  border-color: white;
+  transition: 0s;
 }
 
 .sample img {
