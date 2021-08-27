@@ -3,6 +3,7 @@ const textBoxBtn = document.getElementById('text-box-btn'),
   closeBtn = document.getElementById('close-btn'),
   textBoxContainer = document.getElementById('text-box-container'),
   readBtn = document.getElementById('read-btn'),
+  stopBtn = document.getElementById('stop-btn'),
   voiceOptions = document.getElementById('voice-options'),
   samplesContainer = document.getElementById('smaples-container');
 
@@ -70,7 +71,7 @@ data.forEach((item) => {
   `;
   samplesContainer.appendChild(sample);
 
-  //click event on every sample
+  //set click event on every sample
   sample.addEventListener('click', () => {
     setTextMessage(text);
     speakTextMessage();
@@ -84,6 +85,18 @@ data.forEach((item) => {
 
 //speech functions--------------------------
 const message = new SpeechSynthesisUtterance();
+let voices = [];
+
+//get and show voices in the select element---
+function populateVoiceArr() {
+  voices = speechSynthesis.getVoices();
+  voices.forEach((voice) => {
+    const optionEl = document.createElement('option');
+    optionEl.value = voice.name;
+    optionEl.innerText = `${voice.name} ${voice.lang}`;
+    voiceOptions.appendChild(optionEl);
+  });
+}
 
 function setTextMessage(text) {
   message.text = text;
@@ -93,17 +106,9 @@ function speakTextMessage() {
   speechSynthesis.speak(message);
 }
 
-//get and show voices--------------------------
-voices = [];
-
-function populateVoiceArr() {
-  voices = SpeechSynthesis.getVoices();
-  voices.forEach((voice) => {
-    const optionEl = document.createElement('option');
-    optionEl.value = voice.name;
-    optionEl.innerText = `${voice.name} ${voice.lang}`;
-    voiceOptions.appendChild(optionEl);
-  });
+//set the voice--------------------------
+function setVoice(e) {
+  message.voice = voices.find((item) => item.name === e.target.value);
 }
 
 //-----------------------------------------------------------
@@ -115,6 +120,17 @@ closeBtn.addEventListener('click', () => {
 
 textBoxBtn.addEventListener('click', () => {
   textBoxContainer.classList.add('show');
+});
+
+voiceOptions.addEventListener('change', setVoice);
+
+readBtn.addEventListener('click', () => {
+  setTextMessage(textarea.value);
+  speakTextMessage();
+});
+
+stopBtn.addEventListener('click', () => {
+  speechSynthesis.cancel();
 });
 
 populateVoiceArr();

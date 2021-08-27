@@ -43,6 +43,11 @@ button#read-btn {
   border: solid 2px var(--dark-blue);
   color: whitesmoke;
 }
+button#stop-btn {
+  background-color: rgb(93, 29, 136);
+  border: solid 2px rgb(93, 29, 136);
+  color: whitesmoke;
+}
 button:hover {
   background-color: transparent;
   color: var(--light-blue);
