@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="Zara Zamanian" />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.7.0/css/all.css"
+      integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>Memory Cards</title>
+  </head>
+
+  <body>
+    <h1>
+      Memory Cards
+      <button id="new-btn" class="btn">
+        <i class="fas fa-plus"></i>
+        Add New Card
+      </button>
+    </h1>
+
+    <div id="cards-container" class="cards-container">
+      <div class="card active">
+        <div class="inner-card">
+          <div class="inner-card-front">
+            <p>What is PHP?</p>
+          </div>
+          <div class="inner-card-back">
+            <p>It is a programming language</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="inner-card">
+          <div class="inner-card-front">
+            <p>What is HTML?</p>
+          </div>
+          <div class="inner-card-back">
+            <p>It is a hyper text markup language</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="navigation">
+      <button id="prev" class="nav-btn">
+        <i class="fas fa-arrow-left"></i>
+      </button>
+
+      <p id="current-nav"></p>
+
+      <button id="next" class="nav-btn">
+        <i class="fas fa-arrow-right"></i>
+      </button>
+    </div>
+
+    <div id="new-card-form">
+      <h2>
+        Add New Card
+        <button id="close-btn">
+          <i class="fas fa-times"></i>
+        </button>
+      </h2>
+
+      <div class="form-group">
+        <label for="question">Question</label>
+        <textarea id="question" placeholder="Enter the question..."></textarea>
+      </div>
+      <div class="form-group">
+        <label for="answer">Answer</label>
+        <textarea id="answer" placeholder="Enter the answer..."></textarea>
+      </div>
+
+      <button id="add-btn" class="btn">
+        Add Card
+        <i class="fas fa-plus"></i>
+      </button>
+    </div>
+
+    <button id="del-btn" class="btn">
+      <i class="fas fa-trash"></i>
+      Delete Cards
+    </button>
+
+    <script src="script.js"></script>
+  </body>
+</html>
