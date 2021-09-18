@@ -8,4 +8,43 @@ body {
   font-family: 'Open Sans Condensed', sans-serif;
   background: url(img/bg.jpg) center center no-repeat;
   background-size: cover;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  overflow: hidden;
+  position: relative;
+}
+
+button {
+  cursor: pointer;
+}
+button:focus {
+  outline: 0;
+}
+
+button.btn {
+  border: 0;
+  color: rgb(0, 33, 61);
+  border: solid 1px rgb(153, 191, 248);
+  background-color: rgb(153, 191, 248);
+  height: 33px;
+  width: 135px;
+  border-radius: 6px;
+  transition: 0.4s;
+}
+
+button.btn:hover {
+  border-color: rgb(0, 33, 61);
+
+  background-color: rgb(255, 254, 254);
+  transition: 0.4s;
+}
+
+#del-btn {
+  position: absolute;
+  bottom: 40px;
+  left: 40px;
 }
