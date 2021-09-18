@@ -15,7 +15,7 @@ body {
   align-items: center;
   margin: 0;
   overflow: hidden;
-  position: relative;
+  color: rgb(0, 33, 61);
 }
 
 button {
@@ -26,25 +26,144 @@ button:focus {
 }
 
 button.btn {
-  border: 0;
-  color: rgb(0, 33, 61);
-  border: solid 1px rgb(153, 191, 248);
-  background-color: rgb(153, 191, 248);
+  border: solid 1px rgb(184, 243, 22);
+  background-color: rgb(184, 243, 22);
+  box-shadow: 0 6px 14px -8px black;
   height: 33px;
-  width: 135px;
-  border-radius: 6px;
+  width: 130px;
+  border-radius: 3px;
   transition: 0.4s;
 }
 
 button.btn:hover {
   border-color: rgb(0, 33, 61);
-
   background-color: rgb(255, 254, 254);
+  box-shadow: none;
   transition: 0.4s;
+}
+
+#close-btn,
+.nav-btn {
+  border: 0;
+  background-color: transparent;
 }
 
 #del-btn {
   position: absolute;
   bottom: 40px;
   left: 40px;
+}
+
+.cards-container {
+  perspective: 1000px; /*tip*/
+  position: relative;
+  height: 300px;
+  width: 500px;
+  max-width: 80%;
+  margin-top: 30px;
+}
+
+.card {
+  position: absolute;
+  opacity: 0;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  text-align: center;
+}
+
+.card.active {
+  z-index: 2;
+  opacity: 1;
+  cursor: pointer;
+}
+
+.inner-card {
+  box-shadow: 0 6px 14px -8px black;
+  border-radius: 5px;
+  height: 100%;
+  width: 100%;
+  transition: 0.3s;
+}
+.inner-card:hover {
+  box-shadow: none;
+  transition: 0.3s;
+}
+
+.inner-card-back,
+.inner-card-front {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  background-color: white; /*tip*/
+}
+
+.inner-card-back::after,
+.inner-card-front::after {
+  content: '\f021'; /*tip*/
+  font-family: 'Font Awesome 5 Free', 'Open Sans Condensed', sans-serif; /*tip*/
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  font-size: 14px;
+  font-weight: bold; /*tip*/
+  color: rgb(206, 206, 206);
+}
+
+.navigation {
+  display: flex;
+  margin: 15px 0;
+}
+
+.nav-btn {
+  font-size: 17px;
+}
+.nav-btn:hover {
+  color: rgb(184, 243, 22);
+}
+
+.navigation p {
+  margin: 0 20px;
+}
+
+/*------------------------------------------*/
+#new-card-form {
+  background-color: rgb(224, 241, 177);
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+  max-width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#new-card-form label {
+  display: block;
+  margin: 10px 0;
+  font-weight: 700;
+}
+
+#new-card-form #close-btn {
+  position: absolute;
+  top: 15vh;
+  right: 10vw;
+  font-size: 25px;
+}
+
+#add-btn {
+  margin: 20px 0;
+}
+
+textarea {
+  min-width: 500px;
+  max-width: 80%;
+  padding: 15px;
 }
