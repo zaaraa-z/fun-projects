@@ -18,10 +18,15 @@ body {
   color: rgb(0, 33, 61);
 }
 
+h1 {
+  margin: 0 0 8px 0;
+}
+
 button {
   cursor: pointer;
 }
-button:focus {
+button:focus,
+textarea:focus {
   outline: 0;
 }
 
@@ -54,6 +59,7 @@ button.btn:hover {
   left: 40px;
 }
 
+/*------------------------------------------*/
 .cards-container {
   perspective: 1000px; /*tip*/
   position: relative;
@@ -71,16 +77,23 @@ button.btn:hover {
   top: 0;
   left: 0;
   text-align: center;
+  transform: translateX(50%) rotateY(-10deg); /*tip*/
+  transition: transform 0.4s ease, opacity 0.4s ease; /*tip*/
 }
 
 .card.active {
   z-index: 2;
   opacity: 1;
   cursor: pointer;
+  transform: translateX(0) rotateY(0); /*tip*/
+}
+
+.card.left {
+  transform: translateX(-50%) rotateY(10deg); /*tip*/
 }
 
 .inner-card {
-  box-shadow: 0 6px 14px -8px black;
+  box-shadow: 0 6px 14px -3px black;
   border-radius: 5px;
   height: 100%;
   width: 100%;
@@ -93,6 +106,7 @@ button.btn:hover {
 
 .inner-card-back,
 .inner-card-front {
+  font-size: 23px;
   position: absolute;
   display: flex;
   flex-direction: column;
@@ -118,13 +132,15 @@ button.btn:hover {
 .navigation {
   display: flex;
   margin: 15px 0;
+  background-color: white;
+  padding: 10px;
 }
 
 .nav-btn {
   font-size: 17px;
 }
 .nav-btn:hover {
-  color: rgb(184, 243, 22);
+  color: rgb(157, 214, 0);
 }
 
 .navigation p {
@@ -143,6 +159,8 @@ button.btn:hover {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  z-index: -1;
+  opacity: 0;
 }
 
 #new-card-form label {
