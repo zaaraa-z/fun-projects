@@ -110,7 +110,7 @@ button.btn:hover {
   width: 100%;
   transition: 0.3s;
   transform-style: preserve-3d; /*tip: rotate card to switch between question and answer*/
-  transition: transfrom 0.4s ease; /*tip: rotate card to switch between question and answer*/
+  transition: transform 0.4s ease; /*tip: rotate card to switch between question and answer*/
 }
 
 .card.show-answer .inner-card {

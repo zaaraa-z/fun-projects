@@ -16,7 +16,7 @@ let currentActiveCard = 0;
 const cardsDataArr = [
   {
     question: 'What is "Woman" in Persian?',
-    answer: 'zan, زن',
+    answer: 'zan (زَن)',
   },
   {
     question: 'What is "Woman" in Turkish?',
@@ -41,20 +41,47 @@ function createCard(data, index) {
   }
 
   card.innerHTML = `
-  <div class="inner-card">
-  <div class="inner-card-front">
-    <p>${data.question}</p>
-  </div>
-  <div class="inner-card-back">
-    <p>${data.answer}</p>
-  </div>
-</div>
+    <div class="inner-card">
+        <div class="inner-card-front">
+            <p>${data.question}</p>
+        </div>
+        <div class="inner-card-back">
+            <p>${data.answer}</p>
+        </div>
+    </div>
   `;
 
+  //flip that particular card on click
+  card.addEventListener('click', function () {
+    card.classList.toggle('show-answer');
+  });
+
+  //update array
+  cardsArr.push(card);
+
+  //append card element
   cardsContainer.appendChild(card);
+
+  //update current card nav
+  updateCardsNav();
+}
+
+function deleteCard() {
+  const activeCard = document.querySelector('.card.active');
+  activeCard.classList.remove('active');
+}
+
+function updateCardsNav() {
+  currentCardNav.innerText = `${currentActiveCard + 1} / ${cardsArr.length}`;
 }
 
 //----------------------------------------------------------
 newCardBtn.addEventListener('click', () => cardFrom.classList.add('show'));
 
 closeForm.addEventListener('click', () => cardFrom.classList.remove('show'));
+
+deleteCardBtn.addEventListener('click', deleteCard);
+
+// nextCardBtn.addEventListener('click', () =>  )
+
+createCards();
