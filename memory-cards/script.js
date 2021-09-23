@@ -1,7 +1,7 @@
 const navError = document.getElementById('nav-error');
 const newCardBtn = document.getElementById('new-btn');
 const addCardBtn = document.getElementById('add-btn');
-const deleteCardBtn = document.getElementById('del-btn');
+const deleteCardsBtn = document.getElementById('del-btn');
 const closeForm = document.getElementById('close-btn');
 const nextCardBtn = document.getElementById('next');
 const prevCardBtn = document.getElementById('prev');
@@ -13,6 +13,7 @@ const answerEl = document.getElementById('answer');
 
 const cardsArr = [];
 let currentActiveCard = 0;
+currentCardNav.innerText = '0 / 0';
 
 const cardsDataArr = getCardsData();
 
@@ -32,6 +33,7 @@ const cardsDataArr = getCardsData();
 // ];
 
 //----------------------------------------------------------
+
 function createCards() {
   cardsDataArr.forEach((data, index) => createCard(data, index));
 }
@@ -96,7 +98,11 @@ newCardBtn.addEventListener('click', () => cardFrom.classList.add('show'));
 
 closeForm.addEventListener('click', () => cardFrom.classList.remove('show'));
 
-deleteCardBtn.addEventListener('click', deleteCard);
+deleteCardsBtn.addEventListener('click', () => {
+  localStorage.clear();
+  cardsContainer.innerHTML = '';
+  window.location.reload();
+});
 
 addCardBtn.addEventListener('click', () => {
   const question = questionEl.value;
