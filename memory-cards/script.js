@@ -7,8 +7,8 @@ const prevCardBtn = document.getElementById('prev-btn');
 const currentCardNav = document.getElementById('current-nav');
 const cardsContainer = document.getElementById('cards-container');
 const cardFrom = document.getElementById('new-card-form');
-const question = document.getElementById('question');
-const answer = document.getElementById('answer');
+const questionEl = document.getElementById('question');
+const answerEl = document.getElementById('answer');
 
 const cardsArr = [];
 let currentActiveCard = 0;
@@ -27,6 +27,33 @@ const cardsDataArr = [
     answer: 'Frau',
   },
 ];
+//----------------------------------------------------------
+function createCards() {
+  cardsDataArr.forEach((data, index) => createCard(data, index));
+}
+
+function createCard(data, index) {
+  const card = document.createElement('div');
+  card.classList.add('card');
+
+  if (index === 0) {
+    card.classList.add('active');
+  }
+
+  card.innerHTML = `
+  <div class="inner-card">
+  <div class="inner-card-front">
+    <p>${data.question}</p>
+  </div>
+  <div class="inner-card-back">
+    <p>${data.answer}</p>
+  </div>
+</div>
+  `;
+
+  cardsContainer.appendChild(card);
+}
+
 //----------------------------------------------------------
 newCardBtn.addEventListener('click', () => cardFrom.classList.add('show'));
 
