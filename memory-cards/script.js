@@ -15,8 +15,6 @@ const cardsArr = [];
 let currentActiveCard = 0;
 currentCardNav.innerText = '0 / 0';
 
-const cardsDataArr = getCardsData();
-
 // const cardsDataArr = [
 //   {
 //     question: 'What is "Woman" in Persian?',
@@ -31,9 +29,9 @@ const cardsDataArr = getCardsData();
 //     answer: 'Frau',
 //   },
 // ];
+const cardsDataArr = getCardsData();
 
 //----------------------------------------------------------
-
 function createCards() {
   cardsDataArr.forEach((data, index) => createCard(data, index));
 }
