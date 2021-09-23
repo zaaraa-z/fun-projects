@@ -1,9 +1,10 @@
+const navError = document.getElementById('nav-error');
 const newCardBtn = document.getElementById('new-btn');
 const addCardBtn = document.getElementById('add-btn');
 const deleteCardBtn = document.getElementById('del-btn');
 const closeForm = document.getElementById('close-btn');
-const nextCardBtn = document.getElementById('next-btn');
-const prevCardBtn = document.getElementById('prev-btn');
+const nextCardBtn = document.getElementById('next');
+const prevCardBtn = document.getElementById('prev');
 const currentCardNav = document.getElementById('current-nav');
 const cardsContainer = document.getElementById('cards-container');
 const cardFrom = document.getElementById('new-card-form');
@@ -34,7 +35,7 @@ function createCards() {
 
 function createCard(data, index) {
   const card = document.createElement('div');
-  card.classList.add('card');
+  card.className = 'card';
 
   if (index === 0) {
     card.classList.add('active');
@@ -82,6 +83,40 @@ closeForm.addEventListener('click', () => cardFrom.classList.remove('show'));
 
 deleteCardBtn.addEventListener('click', deleteCard);
 
-// nextCardBtn.addEventListener('click', () =>  )
-
 createCards();
+
+//cards navigation: next
+nextCardBtn.addEventListener('click', function () {
+  cardsArr[currentActiveCard].className = 'card left';
+  currentActiveCard++;
+
+  if (currentActiveCard > cardsArr.length - 1) {
+    currentActiveCard = cardsArr.length - 1;
+    navError.classList.add('show');
+    setTimeout(() => {
+      navError.classList.remove('show');
+    }, 1500);
+  }
+
+  cardsArr[currentActiveCard].className = 'card active';
+
+  updateCardsNav();
+});
+
+//cards navigation: prev
+prevCardBtn.addEventListener('click', function () {
+  cardsArr[currentActiveCard].className = 'card';
+  currentActiveCard--;
+
+  if (currentActiveCard < 0) {
+    currentActiveCard = 0;
+    navError.classList.add('show');
+    setTimeout(() => {
+      navError.classList.remove('show');
+    }, 1500);
+  }
+
+  cardsArr[currentActiveCard].className = 'card active';
+
+  updateCardsNav();
+});

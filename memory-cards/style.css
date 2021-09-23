@@ -82,6 +82,27 @@ button.btn:hover {
   }
 }
 
+#nav-error {
+  position: absolute;
+  opacity: 0;
+  z-index: 0;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: rgb(184, 243, 22);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 25px;
+  border-radius: 10px;
+  transition: 0.4s;
+}
+#nav-error.show {
+  opacity: 1;
+  z-index: 20;
+  transition: 0.4s;
+}
+
 .card {
   position: absolute;
   opacity: 0;
@@ -95,7 +116,7 @@ button.btn:hover {
 }
 
 .card.active {
-  z-index: 2;
+  z-index: 5;
   opacity: 1;
   cursor: pointer;
   transform: translateX(0) rotateY(0); /*tip: animate cards when clicking on next or pre*/
