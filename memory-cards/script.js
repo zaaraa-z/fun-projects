@@ -14,20 +14,23 @@ const answerEl = document.getElementById('answer');
 const cardsArr = [];
 let currentActiveCard = 0;
 
-const cardsDataArr = [
-  {
-    question: 'What is "Woman" in Persian?',
-    answer: 'zan (زَن)',
-  },
-  {
-    question: 'What is "Woman" in Turkish?',
-    answer: 'Kadin',
-  },
-  {
-    question: 'What is "Woman" in German?',
-    answer: 'Frau',
-  },
-];
+const cardsDataArr = getCardsData();
+
+// const cardsDataArr = [
+//   {
+//     question: 'What is "Woman" in Persian?',
+//     answer: 'zan (زَن)',
+//   },
+//   {
+//     question: 'What is "Woman" in Turkish?',
+//     answer: 'Kadin',
+//   },
+//   {
+//     question: 'What is "Woman" in German?',
+//     answer: 'Frau',
+//   },
+// ];
+
 //----------------------------------------------------------
 function createCards() {
   cardsDataArr.forEach((data, index) => createCard(data, index));
@@ -76,6 +79,18 @@ function updateCardsNav() {
   currentCardNav.innerText = `${currentActiveCard + 1} / ${cardsArr.length}`;
 }
 
+function getCardsData() {
+  const cards = JSON.parse(localStorage.getItem('cards'));
+  return cards === null ? [] : cards;
+}
+
+function setCardsData(allAddedCards) {
+  localStorage.setItem('cards', JSON.stringify(allAddedCards));
+  window.location.reload();
+}
+
+createCards();
+
 //----------------------------------------------------------
 newCardBtn.addEventListener('click', () => cardFrom.classList.add('show'));
 
@@ -83,7 +98,26 @@ closeForm.addEventListener('click', () => cardFrom.classList.remove('show'));
 
 deleteCardBtn.addEventListener('click', deleteCard);
 
-createCards();
+addCardBtn.addEventListener('click', () => {
+  const question = questionEl.value;
+  const answer = answerEl.value;
+
+  console.log(answer, question);
+
+  if (question.trim() && answer.trim()) {
+    const newCard = { question, answer };
+
+    createCard(newCard);
+
+    questionEl.value = '';
+    answerEl.value = '';
+
+    cardFrom.classList.remove('show');
+
+    cardsDataArr.push(newCard);
+    setCardsData(cardsDataArr);
+  }
+});
 
 //cards navigation: next
 nextCardBtn.addEventListener('click', function () {
