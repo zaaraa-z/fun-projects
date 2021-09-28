@@ -64,12 +64,14 @@ button.btn:hover {
     bottom: 40px;
     left: 50%;
     transform: translateX(-50%);
+    -webkit-transform: translateX(-50%);
   }
 }
 
 /*------------------------------------------*/
 .cards-container {
   perspective: 1000px; /*tip*/
+  -webkit-perspective: 1000px;
   position: relative;
   height: 300px;
   width: 500px;
@@ -112,6 +114,7 @@ button.btn:hover {
   left: 0;
   text-align: center;
   transform: translateX(50%) rotateY(-10deg); /*tip: animate cards when clicking on next or pre*/
+  -webkit-transform: translateX(50%) rotateY(-10deg);
   transition: transform 0.4s ease, opacity 0.4s ease; /*tip: animate cards when clicking on next or pre*/
 }
 
@@ -120,10 +123,12 @@ button.btn:hover {
   opacity: 1;
   cursor: pointer;
   transform: translateX(0) rotateY(0); /*tip: animate cards when clicking on next or pre*/
+  -webkit-transform: translateX(0) rotateY(0);
 }
 
 .card.left {
   transform: translateX(-50%) rotateY(10deg); /*tip: animate cards when clicking on next or pre*/
+  -webkit-transform: translateX(-50%) rotateY(10deg);
 }
 
 .inner-card {
@@ -131,12 +136,16 @@ button.btn:hover {
   width: 100%;
   transition: 0.3s;
   transform-style: preserve-3d; /*tip: rotate card to switch between question and answer*/
+  /*TODO*/
+  -webkit-transform-style: preserve-3d;
+
   transition: transform 0.4s ease; /*tip: rotate card to switch between question and answer*/
 }
 
 .card.show-answer .inner-card {
   /*tip: rotate card to switch between question and answer*/
   transform: rotateX(180deg);
+  -webkit-transform: rotateX(180deg);
 }
 
 .inner-card:hover .inner-card-back::after,
@@ -147,6 +156,9 @@ button.btn:hover {
 .inner-card-back,
 .inner-card-front {
   backface-visibility: hidden; /*tip: rotate card to switch between question and answer*/
+  /*TODO*/
+  -webkit-backface-visibility: hidden;
+
   font-size: 23px;
   position: absolute;
   display: flex;
@@ -180,11 +192,13 @@ button.btn:hover {
 .inner-card-front {
   /*tip: rotate card to switch between question and answer*/
   transform: rotateX(0deg);
+  -webkit-transform: rotateX(0deg);
   z-index: 2;
 }
 .inner-card-back {
   /*tip: rotate card to switch between question and answer*/
   transform: rotateX(180deg);
+  -webkit-transform: rotateX(180deg);
 }
 
 /*--------------------------------------------*/
