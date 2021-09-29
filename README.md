@@ -22,7 +22,7 @@ HTML5, CSS3, JS
 
 8- **[Meals To Rescue!](https://zarazamanian.com/demo/meals-to-rescue)**: a web app to find out wat to cock when you are helpless! Just enter the food keyword and wait for the results. Then you can click on a special meal to see the recipe. There is also a random button whic is handy when you have no idea! 
 
-9- **[Expense Review](https://zarazamanian.com/demo/expense-review)**: an app to keep track of your expenses and incomes.
+9- **["Expense Review" app](https://zarazamanian.com/demo/expense-review)**: an app to keep track of your expenses and incomes.
 
 10- **[Music Player](https://zarazamanian.com/demo/music-player)**: a very fun app to play music with cute animations!
 
@@ -30,11 +30,11 @@ HTML5, CSS3, JS
 
 12- **"Type It Fast" game**: 
 
-13- **Text to Speech**: 
+13- **"Text to Speech" web app**: 
 
-14- **"Memory Cards" game**: 
+14- **["Memory Cards" app](https://www.zarazamanian.com/demo/memory-cards)**: 
 
-15- **Serach Lyrics!: I'm working on it!
+15- **"Serach Lyrics!" app: I'm working on it!
 
 
 
