@@ -34,7 +34,7 @@ HTML5, CSS3, JS
 
 14- **["Memory Cards" app](https://www.zarazamanian.com/demo/memory-cards)**: I really like this one! As a constant learner, I appreciate any tools to help learning more and more. This memory cards app helps you to add your own Q/A. the animations are very lovely. This was the first time I was using these techniques.
 
-15- **"Serach Lyrics!" app**: I'm working on it!
+15- **"Search Lyrics!" app**: I'm working on it!
 
 
 
