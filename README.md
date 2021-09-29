@@ -28,11 +28,11 @@ HTML5, CSS3, JS
 
 11- **Infinite Scrolling** (fetch/load data on scroll): a template for blog or news website in which more data will be fetched when you are scrolling down. You can also search in loaded data for a special letter, word or sentence; whatever you type, the DOM will filter the data based on that.
 
-12- **["Type It Fast" game](https://zarazamanian.com/demo/type-it-fast/)**: 
+12- **["Type It Fast" game](https://zarazamanian.com/demo/type-it-fast/)**: a game to measure your typing speed! it has 3 difficulty levels and the timer changes based on your choice. I needed a random word creator API but I didn't find anything for free, so the random words are being created according to an array of words I have provided in the JS file.
 
-13- **["Text to Speech" web app](https://codepen.io/zaaraa-z/pen/LYLqOLM)**: 
+13- **["Text to Speech" web app](https://codepen.io/zaaraa-z/pen/LYLqOLM)**: one of the things I remind myself of every now and then is that "You have to develop for the ones with disabilitis first!". I know how it is like to be disable, temporarily. We have to care about people who are limitted. This web app is a simple pne for autistic childs to express their feelings and needs via text and images.
 
-14- **["Memory Cards" app](https://www.zarazamanian.com/demo/memory-cards)**: 
+14- **["Memory Cards" app](https://www.zarazamanian.com/demo/memory-cards)**: I really like this one! As a constant learner, I appreciate any tools to help learning more and more. This memory cards app helps you to add your own Q/A. the animations are very lovely. This was the first time I was using these techniques.
 
 15- **"Serach Lyrics!" app**: I'm working on it!
 
