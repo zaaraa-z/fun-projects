@@ -28,7 +28,13 @@ HTML5, CSS3, JS
 
 11- **Infinite Scrolling** (fetch/load data on scroll): a template for blog or news website in which more data will be fetched when you are scrolling down. You can also search in loaded data for a special letter, word or sentence; whatever you type, the DOM will filter the data based on that.
 
-12- **"Type It Fast" game**: I'm working on it!
+12- **"Type It Fast" game**: 
+
+13- **Text to Speech**: 
+
+14- **"Memory Cards" game**: 
+
+15- **Serach Lyrics!: I'm working on it!
 
 
 
