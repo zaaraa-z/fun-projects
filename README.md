@@ -34,7 +34,7 @@ HTML5, CSS3, JS
 
 14- **["Memory Cards" app](https://www.zarazamanian.com/demo/memory-cards)**: 
 
-15- **"Serach Lyrics!" app: I'm working on it!
+15- **"Serach Lyrics!" app**: I'm working on it!
 
 
 
