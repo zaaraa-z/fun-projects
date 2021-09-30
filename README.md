@@ -18,8 +18,9 @@ HTML5, CSS3, JS
 
 6- **[Menu Slider & Modal](https://zarazamanian.com/demo/menu-slider-&-modal)**: a simple website width a vertical menu slider which can be fold on click, and a customised modal to login. 
 
-7- **["Guess Word" game](https://zarazamanian.com/demo/guess-word)** (a fun version of Hangman game): I tought, well, "Hangman" is not a pleasant name, AT ALL. It is not a joke to play a game in which you are going to hang a man just like that! So, my challenge was to think of a more delightful graphic and less emotional one! I love gardening, so, I chose this! You will ruin my sunflower if you guess wrong letters. I can live with that though! Seriously! Watching a flower dying is not a big deal in comparison to take a human being life!
-[To Do Features:]
+7- **["Guess Word" game](https://zarazamanian.com/demo/guess-word)** (a fun version of Hangman game): I tought, well, "Hangman" is not a pleasant name, AT ALL. It is not a joke to play a game in which you are going to hang a man just like that! So, my challenge was to think of a more delightful graphic and less emotional one! I love gardening, so, I chose this! You will ruin my sunflower if you guess wrong letters. I can live with that though! Seriously! Watching a flower dying is not a big deal in comparison to take a human being life!  
+
+**To Do Features:**
 - [ ] Fix the typing issue in mobile devices (make the blanks clickable).
 - [ ] Fix the bottom message position in mobile devices.
 
@@ -27,8 +28,9 @@ HTML5, CSS3, JS
 
 9- **["Expense Review" app](https://zarazamanian.com/demo/expense-review)**: an app to keep track of your expenses and incomes.
 
-10- **[Music Player](https://zarazamanian.com/demo/music-player)**: a very fun app to play music with cute animations!
-[To Do Features:]
+10- **[Music Player](https://zarazamanian.com/demo/music-player)**: a very fun app to play music with cute animations!  
+
+**To Do Features:**
 - [ ] Check the music lag issue.
 
 11- **Infinite Scrolling** (fetch/load data on scroll): a template for blog or news website in which more data will be fetched when you are scrolling down. You can also search in loaded data for a special letter, word or sentence; whatever you type, the DOM will filter the data based on that.
@@ -37,8 +39,9 @@ HTML5, CSS3, JS
 
 13- **["Text to Speech" web app](https://codepen.io/zaaraa-z/pen/LYLqOLM)**: one of the things I remind myself of every now and then is that "You have to develop for the ones with disabilitis first!". I know how it is like to be disable, temporarily. We have to care about people who are limitted. This web app is a simple pne for autistic childs to express their feelings and needs via text and images.
 
-14- **["Memory Cards" app](https://www.zarazamanian.com/demo/memory-cards)**: I really like this one! As a constant learner, I appreciate any tools to help learning more and more. This memory cards app helps you to add your own Q/A. the animations are very lovely. This was the first time I was using these techniques.
-[To Do Features:]
+14- **["Memory Cards" app](https://www.zarazamanian.com/demo/memory-cards)**: I really like this one! As a constant learner, I appreciate any tools to help learning more and more. This memory cards app helps you to add your own Q/A. the animations are very lovely. This was the first time I was using these techniques.  
+
+**To Do Features:**
 - [x] Check the browser compability and solve the Safari issue#1.
 - [ ] Add a login system.
 - [ ] Add a database to keep the data instead of localstorage.
