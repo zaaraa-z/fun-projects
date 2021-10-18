@@ -1,0 +1,117 @@
+body {
+  background-color: #05707e;
+  height: 100vh; }
+
+.wrapper {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate3d(-50%, -50%, 0); }
+  .wrapper input {
+    position: absolute;
+    left: -3000px; }
+
+.toggle {
+  cursor: pointer;
+  display: inline-block;
+  position: absolute;
+  width: 80px;
+  top: 36px;
+  left: 50%;
+  transform: translateX(-50%);
+  height: 50px;
+  background-color: black;
+  border-radius: 84px;
+  z-index: 2;
+  transition: background-color 200ms cubic-bezier(0.445, 0.05, 0.55, 0.95); }
+
+.toggle__handler {
+  display: inline-block;
+  position: relative;
+  z-index: 1;
+  top: 3px;
+  left: 3px;
+  width: 44px;
+  height: 44px;
+  background-color: white;
+  border-radius: 50px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+  transition: all 400ms cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  transform: rotate(-45deg); }
+
+input:checked + .toggle:after {
+  color: white; }
+input:checked + .toggle .toggle__handler {
+  transform: translate3d(30px, 0, 0) rotate(0); }
+input:checked + .toggle + .shape {
+  transform: rotateY(180deg); }
+
+.shape {
+  position: relative;
+  border-radius: 30px 30px 10px 20px;
+  border-bottom: 100px solid white;
+  border-left: 20px solid transparent;
+  border-right: 10px solid transparent;
+  height: 0;
+  width: 94px; }
+  .shape::before, .shape::after {
+    content: '';
+    position: absolute;
+    height: 35px;
+    width: 35px;
+    border-radius: 50%;
+    top: -22px;
+    background: black;
+    z-index: -1; }
+  .shape::before {
+    left: -12.5px; }
+  .shape::after {
+    right: -12.5px; }
+  .shape .eye {
+    position: absolute;
+    top: 5px;
+    background: black;
+    height: 35px;
+    width: 26px; }
+    .shape .eye.left {
+      left: 6px;
+      transform: rotate(20deg);
+      border-radius: 50px 10px 20px 25px;
+      animation: blink-left 2s ease-in-out infinite; }
+    .shape .eye.right {
+      left: 45px;
+      border-radius: 10px 50px 25px 20px;
+      transform: rotate(-20deg);
+      animation: blink-right 2s ease-in-out infinite; }
+    .shape .eye .inner-eye {
+      height: 13px;
+      width: 13px;
+      top: 3px;
+      left: 2px;
+      background-color: white;
+      position: inherit;
+      border-radius: 50%;
+      background-image: radial-gradient(circle at 6px, black 5px, white 0); }
+      .shape .eye .inner-eye.left {
+        left: 10px; }
+  .shape .mouth {
+    position: absolute;
+    height: 4px;
+    width: 52px;
+    bottom: -92px;
+    left: 15px;
+    border-radius: 2px;
+    background-color: black; }
+
+@keyframes blink-right {
+  85% {
+    transform: rotate(-20deg) rotateX(0deg); }
+  90% {
+    transform: rotateX(90deg); } }
+@keyframes blink-left {
+  85% {
+    transform: rotate(20deg) rotateX(0deg); }
+  90% {
+    transform: rotateX(90deg); } }
+
+/*# sourceMappingURL=style.css.map */
