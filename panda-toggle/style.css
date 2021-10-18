@@ -1,12 +1,13 @@
 body {
   background-color: #05707e;
-  height: 100vh; }
+  height: 100vh;
+  margin: 0; }
 
 .wrapper {
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate3d(-50%, -50%, 0); }
+  transform: translate(-50%, -50%); }
   .wrapper input {
     position: absolute;
     left: -3000px; }
@@ -16,74 +17,81 @@ body {
   display: inline-block;
   position: absolute;
   width: 80px;
-  top: 36px;
+  top: 43px;
   left: 50%;
   transform: translateX(-50%);
-  height: 50px;
+  height: 40px;
   background-color: black;
-  border-radius: 84px;
+  border-radius: 90px;
   z-index: 2;
-  transition: background-color 200ms cubic-bezier(0.445, 0.05, 0.55, 0.95); }
+  transition: background-color 200ms cubic-bezier(0.445, 0.05, 0.55, 0.95);
+  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.5); }
 
-.toggle__handler {
+.toggle-btn {
   display: inline-block;
   position: relative;
   z-index: 1;
-  top: 3px;
+  top: 2px;
   left: 3px;
-  width: 44px;
-  height: 44px;
+  width: 35px;
+  height: 35px;
   background-color: white;
   border-radius: 50px;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
-  transition: all 400ms cubic-bezier(0.68, -0.55, 0.265, 1.55);
-  transform: rotate(-45deg); }
+  transition: all 400ms cubic-bezier(0.68, -0.55, 0.265, 1.55); }
 
-input:checked + .toggle:after {
-  color: white; }
-input:checked + .toggle .toggle__handler {
-  transform: translate3d(30px, 0, 0) rotate(0); }
-input:checked + .toggle + .shape {
+input:checked + .toggle .toggle-btn {
+  transform: translate3d(40px, 0, 0) rotate(0); }
+input:checked + .toggle + .head-shape {
   transform: rotateY(180deg); }
+  input:checked + .toggle + .head-shape ~ .ear.left {
+    left: -7px; }
+  input:checked + .toggle + .head-shape ~ .ear.right {
+    right: 6.5px; }
 
-.shape {
+.body-shape {
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  top: 50%;
+  left: 50%;
+  border: solid 6px white;
+  border-radius: 50%;
+  transform: translate(-50%, -50%); }
+  .body-shape .author {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    font-weight: 600;
+    transform: translateX(-50%);
+    color: white;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
+
+.head-shape {
   position: relative;
   border-radius: 30px 30px 10px 20px;
   border-bottom: 100px solid white;
   border-left: 20px solid transparent;
   border-right: 10px solid transparent;
   height: 0;
-  width: 94px; }
-  .shape::before, .shape::after {
-    content: '';
-    position: absolute;
-    height: 35px;
-    width: 35px;
-    border-radius: 50%;
-    top: -22px;
-    background: black;
-    z-index: -1; }
-  .shape::before {
-    left: -12.5px; }
-  .shape::after {
-    right: -12.5px; }
-  .shape .eye {
+  width: 94px;
+  z-index: 1; }
+  .head-shape .eye {
     position: absolute;
     top: 5px;
     background: black;
     height: 35px;
     width: 26px; }
-    .shape .eye.left {
+    .head-shape .eye.left {
       left: 6px;
       transform: rotate(20deg);
       border-radius: 50px 10px 20px 25px;
-      animation: blink-left 2s ease-in-out infinite; }
-    .shape .eye.right {
+      animation: blink-left 1.5s ease-in-out infinite; }
+    .head-shape .eye.right {
       left: 45px;
       border-radius: 10px 50px 25px 20px;
       transform: rotate(-20deg);
-      animation: blink-right 2s ease-in-out infinite; }
-    .shape .eye .inner-eye {
+      animation: blink-right 1.5s ease-in-out infinite; }
+    .head-shape .eye .inner-eye {
       height: 13px;
       width: 13px;
       top: 3px;
@@ -92,16 +100,29 @@ input:checked + .toggle + .shape {
       position: inherit;
       border-radius: 50%;
       background-image: radial-gradient(circle at 6px, black 5px, white 0); }
-      .shape .eye .inner-eye.left {
+      .head-shape .eye .inner-eye.left {
         left: 10px; }
-  .shape .mouth {
+  .head-shape .mouth {
     position: absolute;
     height: 4px;
     width: 52px;
-    bottom: -92px;
+    bottom: -90px;
     left: 15px;
     border-radius: 2px;
     background-color: black; }
+
+.ear {
+  position: absolute;
+  height: 35px;
+  width: 35px;
+  border-radius: 50%;
+  top: -18px;
+  background: black;
+  z-index: -1; }
+  .ear.left {
+    left: -1px; }
+  .ear.right {
+    right: -5.5px; }
 
 @keyframes blink-right {
   85% {
