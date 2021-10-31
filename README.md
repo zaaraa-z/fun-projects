@@ -46,7 +46,10 @@ HTML5, CSS3, JS
 - [ ] Add a login system.
 - [ ] Add a database to keep the data instead of localstorage.
 
-15- **"Search Lyrics!" app**: I'm working on it!
+
+15- **["Panda Toggle"](https://codepen.io/zaaraa-z/pen/VwzaVOG)**: a customized toggle button. 
+
+16- **"Search Lyrics!" app**: I'm working on it!
 
 
 
