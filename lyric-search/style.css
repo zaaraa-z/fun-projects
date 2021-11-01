@@ -3,8 +3,9 @@
 }
 
 body {
+  background-color: #ededed;
   text-align: center;
-  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
   margin: 0;
   display: flex;
   flex-direction: column;
@@ -14,6 +15,7 @@ body {
 }
 
 input {
+  font-size: 16px;
   border: solid 1px white;
   padding: 0 12px;
   height: 50px;
@@ -28,7 +30,6 @@ input:active {
 }
 
 button {
-  padding: 0 20px;
   border: solid 2px white;
   border-radius: 7px;
   background-color: rgb(77, 0, 60);
@@ -36,6 +37,7 @@ button {
   font-size: 16px;
   cursor: pointer;
   height: 43px;
+  width: 75px;
   transition: 0.3s;
 }
 
@@ -47,6 +49,11 @@ button:hover {
 
 button:active {
   transform: scale(0.94);
+}
+
+h2 {
+  margin-bottom: 40px;
+  color: rgb(77, 0, 60);
 }
 
 /*-------------------------------------------*/
@@ -117,4 +124,40 @@ header form input {
 /*-------------------------------------------*/
 .main {
   padding: 50px 0;
+  width: 500px;
+  max-width: 80%;
+  font-size: 14px;
+}
+
+.main button {
+  height: 35px;
+  font-size: 13px;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+ul li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 6px 0;
+}
+
+ul li span {
+  padding-right: 20px;
+  text-align: left;
+  max-width: 52vw;
+}
+@media only screen and (max-width: 600px) {
+  ul li span {
+    font-size: 12px;
+  }
+}
+
+#pagination {
+  margin-top: 30px;
 }
