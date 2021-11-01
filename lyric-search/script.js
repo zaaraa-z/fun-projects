@@ -4,6 +4,7 @@ const results = document.getElementById('result');
 const pagination = document.getElementById('pagination');
 const apiURL = 'https://api.lyrics.ovh';
 
+//-------------------------------------------------
 //------------------Functions------------------
 //fetch the songs
 async function searchSongs(word) {
@@ -84,6 +85,21 @@ async function navigate(url) {
   displayResults(data);
 }
 
+//fetch clicked song lyric
+async function fetchLyric(artist, songTitle) {
+  const res = await fetch(`${apiURL}/v1/${artist}/${songTitle}`);
+  const data = await res.json();
+  const lyric = data.lyrics.replace(/(\r\n|\r|\n)/g, '</br>');
+
+  results.innerHTML = `
+    <h3>${artist} - ${songTitle}</h3>
+    <span>${lyric}</span>
+  `;
+
+  pagination.innerHTML = '';
+}
+
+//-------------------------------------------------
 //--------------Event Listeneres-------------------
 form.addEventListener('submit', (e) => {
   e.preventDefault();
@@ -93,5 +109,15 @@ form.addEventListener('submit', (e) => {
     alert('Please Enter a Search Term!');
   } else {
     searchSongs(searchedTerm);
+  }
+});
+
+results.addEventListener('click', (e) => {
+  const clickedEl = e.target;
+  if (clickedEl.tagName === 'BUTTON') {
+    const clickedBtnArtist = clickedEl.getAttribute('data-artist');
+    const clickedBtnSongTitle = clickedEl.getAttribute('data-songTitle');
+
+    fetchLyric(clickedBtnArtist, clickedBtnSongTitle);
   }
 });
