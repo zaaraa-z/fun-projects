@@ -52,7 +52,7 @@ HTML5, CSS3, JS
 16- **["Search Lyrics!" app](https://zarazamanian.com/demo/lyric-search/)**: search the lyrics based on the song/artist name here. I finally learnt how to deal with CORS error in this project which means a lot to me!
 
 
-16- **["Breathe With Me!"](https://zarazamanian.com/demo/breathe-with-me/)**: a simple UI to practice deep breathing.
+17- **["Breathe With Me!"](https://zarazamanian.com/demo/breathe-with-me/)**: a simple UI to practice deep breathing.
 
 
 
