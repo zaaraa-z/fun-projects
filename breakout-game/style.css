@@ -34,7 +34,7 @@ button:focus {
   outline: 0;
 }
 button:active {
-  transform: scale(0.7);
+  transform: scale(0.9);
 }
 button:hover {
   background-color: var(--light);
