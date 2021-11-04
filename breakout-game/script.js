@@ -3,6 +3,7 @@ const rulesBtn = document.getElementById('rules-btn');
 const closeBtn = document.getElementById('close-btn');
 const canvas = document.getElementById('canvas');
 const ctx = canvas.getContext('2d');
+let score = 0;
 
 //-----------------Canvas--------------------
 //create & draw the ball
@@ -41,10 +42,17 @@ function drawPaddle() {
   ctx.closePath();
 }
 
+//create score
+function drawScore() {
+  ctx.font = '17px Verdana, Geneva, Tahoma, sans-serif';
+  ctx.fillText(`Score: ${score}`, canvas.width - 90, 25);
+}
+
 //------------Call Functions-----------------
 function drawShapes() {
   drawBall();
   drawPaddle();
+  drawScore();
 }
 
 drawShapes();
