@@ -2,8 +2,11 @@ const rules = document.getElementById('rules');
 const rulesBtn = document.getElementById('rules-btn');
 const closeBtn = document.getElementById('close-btn');
 const canvas = document.getElementById('canvas');
+
 const ctx = canvas.getContext('2d');
 let score = 0;
+const brickRowCount = 5;
+const brickColCount = 9;
 
 //-----------------Canvas--------------------
 //create & draw the ball
@@ -48,14 +51,38 @@ function drawScore() {
   ctx.fillText(`Score: ${score}`, canvas.width - 90, 25);
 }
 
+//create & draw the bricks
+const brick = {
+  w: 70,
+  h: 20,
+  padding: 10,
+  offsetX: 45,
+  offsetY: 60,
+  visible: true,
+};
+
+const bricksArr = [];
+for (let row = 0; row < brickRowCount; row++) {
+  bricksArr[row] = [];
+
+  for (let col = 0; col < brickColCount; col++) {
+    const x = brick.offsetX + row * (brick.w + brick.padding);
+    const y = brick.offsetY + col * (brick.h + brick.padding);
+
+    bricksArr[row][col] = { x, y, ...brick };
+  }
+}
+
 //------------Call Functions-----------------
-function drawShapes() {
+function drawAll() {
   drawBall();
   drawPaddle();
   drawScore();
+  drawBricks();
 }
 
-drawShapes();
+drawAll();
+
 //------------Event Listener-----------------
 rulesBtn.addEventListener('click', () => {
   rules.className = 'show';
