@@ -5,8 +5,8 @@ const canvas = document.getElementById('canvas');
 
 const ctx = canvas.getContext('2d');
 let score = 0;
-const brickRowCount = 5;
-const brickColCount = 9;
+const brickRowCount = 9;
+const brickColCount = 5;
 
 //-----------------Canvas--------------------
 //create & draw the ball
@@ -53,10 +53,10 @@ function drawScore() {
 
 //create & draw the bricks
 const brick = {
-  w: 70,
-  h: 20,
-  padding: 10,
-  offsetX: 45,
+  w: 55,
+  h: 15,
+  padding: 8,
+  offsetX: 70,
   offsetY: 60,
   visible: true,
 };
@@ -71,6 +71,20 @@ for (let row = 0; row < brickRowCount; row++) {
 
     bricksArr[row][col] = { x, y, ...brick };
   }
+}
+
+console.log(bricksArr);
+
+function drawBricks() {
+  bricksArr.forEach((col) => {
+    col.forEach((brick) => {
+      ctx.beginPath();
+      ctx.rect(brick.x, brick.y, brick.w, brick.h);
+      ctx.fillStyle = brick.visible ? '#ca5164' : 'transparent';
+      ctx.fill();
+      ctx.closePath();
+    });
+  });
 }
 
 //------------Call Functions-----------------
