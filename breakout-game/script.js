@@ -98,7 +98,7 @@ function movePaddle() {
   }
 }
 
-//-------------------Call Functions---------------------
+//-----------------------Draw All-----------------------
 function drawAll() {
   drawBall();
   drawPaddle();
@@ -118,9 +118,19 @@ function update() {
 
 update();
 
-//----------------Keyboard Event Handler-----------------
+//-------------------Keyboard Funcs----------------------
+function keyDown(e) {
+  if (e.key === 'Right' || e.key === 'ArrowRight') {
+    paddle.dx = paddle.speed;
+  } else if (e.key === 'Left' || e.key === 'ArrowLeft') {
+    paddle.dx = -paddle.speed;
+  }
+}
 
 //-------------------Event Listener----------------------
+document.addEventListener('keydown', keyDown);
+document.addEventListener('keyup', keyUp);
+
 rulesBtn.addEventListener('click', () => {
   rules.className = 'show';
 });
