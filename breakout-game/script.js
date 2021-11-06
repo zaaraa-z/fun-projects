@@ -100,6 +100,8 @@ function movePaddle() {
 
 //-----------------------Draw All-----------------------
 function drawAll() {
+  ctx.clearRect(0, 0, canvas.width, canvas.height);
+
   drawBall();
   drawPaddle();
   drawScore();
