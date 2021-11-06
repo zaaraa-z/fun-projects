@@ -89,12 +89,25 @@ function drawBricks() {
 function movePaddle() {
   paddle.x += paddle.dx;
 
-  //wall detection
+  //wall detection for paddle
   if (paddle.x + paddle.w > canvas.width) {
     paddle.x = canvas.width - paddle.w;
   }
   if (paddle.x < 0) {
     paddle.x = 0;
+  }
+}
+
+function moveBall() {
+  ball.x += ball.dx;
+  ball.y += ball.dy;
+
+  //wall detection for ball
+  if (ball.x + ball.size > canvas.width || ball.x - ball.size < 0) {
+    ball.dx *= -1;
+  }
+  if (ball.y + ball.size > canvas.height || ball.y - ball.size < 0) {
+    ball.dy *= -1;
   }
 }
 
@@ -111,6 +124,7 @@ function drawAll() {
 //-------------Update Drawings & Animations-------------
 function update() {
   movePaddle();
+  moveBall();
 
   drawAll();
 
