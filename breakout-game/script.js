@@ -5,15 +5,15 @@ const canvas = document.getElementById('canvas');
 
 const ctx = canvas.getContext('2d');
 let score = 0;
-const brickRowCount = 9;
-const brickColCount = 5;
+const brickColCount = 9;
+const brickRowCount = 5;
 
-//-----------------Canvas--------------------
+//-----------------Canvas Drawings--------------------
 //create & draw the ball
 const ball = {
   x: canvas.width / 2,
   y: canvas.height / 2,
-  size: 10,
+  size: 8,
   speed: 4,
   dx: 4,
   dy: -4,
@@ -62,18 +62,16 @@ const brick = {
 };
 
 const bricksArr = [];
-for (let row = 0; row < brickRowCount; row++) {
-  bricksArr[row] = [];
+for (let col = 0; col < brickColCount; col++) {
+  bricksArr[col] = [];
 
-  for (let col = 0; col < brickColCount; col++) {
-    const x = brick.offsetX + row * (brick.w + brick.padding);
-    const y = brick.offsetY + col * (brick.h + brick.padding);
+  for (let row = 0; row < brickRowCount; row++) {
+    const x = brick.offsetX + col * (brick.w + brick.padding);
+    const y = brick.offsetY + row * (brick.h + brick.padding);
 
-    bricksArr[row][col] = { x, y, ...brick };
+    bricksArr[col][row] = { x, y, ...brick };
   }
 }
-
-console.log(bricksArr);
 
 function drawBricks() {
   bricksArr.forEach((col) => {
@@ -87,7 +85,20 @@ function drawBricks() {
   });
 }
 
-//------------Call Functions-----------------
+//-----------------Canvas Animations--------------------
+function movePaddle() {
+  paddle.x += paddle.dx;
+
+  //wall detection
+  if (paddle.x + paddle.w > canvas.w) {
+    paddle.x = canvas.w - paddle.w;
+  }
+  if (paddle.x < 0) {
+    paddle.x = 0;
+  }
+}
+
+//-------------------Call Functions---------------------
 function drawAll() {
   drawBall();
   drawPaddle();
@@ -95,9 +106,21 @@ function drawAll() {
   drawBricks();
 }
 
-drawAll();
+//-------------Update Drawings & Animations-------------
+function update() {
+  movePaddle();
 
-//------------Event Listener-----------------
+  drawAll();
+
+  //call built-in requestAnimationFrame method
+  requestAnimationFrame(update);
+}
+
+update();
+
+//----------------Keyboard Event Handler-----------------
+
+//-------------------Event Listener----------------------
 rulesBtn.addEventListener('click', () => {
   rules.className = 'show';
 });
