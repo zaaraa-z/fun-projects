@@ -90,8 +90,8 @@ function movePaddle() {
   paddle.x += paddle.dx;
 
   //wall detection
-  if (paddle.x + paddle.w > canvas.w) {
-    paddle.x = canvas.w - paddle.w;
+  if (paddle.x + paddle.w > canvas.width) {
+    paddle.x = canvas.width - paddle.w;
   }
   if (paddle.x < 0) {
     paddle.x = 0;
@@ -126,6 +126,17 @@ function keyDown(e) {
     paddle.dx = paddle.speed;
   } else if (e.key === 'Left' || e.key === 'ArrowLeft') {
     paddle.dx = -paddle.speed;
+  }
+}
+
+function keyUp(e) {
+  if (
+    e.key === 'Right' ||
+    e.key === 'ArrowRight' ||
+    e.key === 'Left' ||
+    e.key === 'ArrowLeft'
+  ) {
+    paddle.dx = 0;
   }
 }
 
