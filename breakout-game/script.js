@@ -131,13 +131,32 @@ function moveBall() {
         ) {
           ball.dy *= -1;
           brick.visible = false;
+
+          //increase the score after hiting any brick
+          increaseScore();
         }
       }
     });
   });
 }
 
-console.log(bricksArr);
+//---------------Score + winning & losing---------------
+function increaseScore() {
+  score++;
+
+  if (score % (brickColCount * brickRowCount) === 0) {
+    alert('You Won!');
+    showAllBricks();
+  }
+}
+
+function showAllBricks() {
+  score = 0;
+  bricksArr.forEach((col) => {
+    col.forEach((brick) => (brick.visible = true));
+  });
+}
+
 //-----------------------Draw All-----------------------
 function drawAll() {
   ctx.clearRect(0, 0, canvas.width, canvas.height);
