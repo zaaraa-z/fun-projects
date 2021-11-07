@@ -132,26 +132,31 @@ function moveBall() {
           ball.dy *= -1;
           brick.visible = false;
 
-          //increase the score after hiting any brick
+          //increase the score after hitting any brick
           increaseScore();
         }
       }
     });
   });
+
+  //losing by hitting the bottom
+  if (ball.y + ball.size > canvas.height) {
+    score = 0;
+    showAllBricks();
+  }
 }
 
-//---------------Score + winning & losing---------------
+//---------------Score + winning/losing---------------
 function increaseScore() {
   score++;
 
   if (score % (brickColCount * brickRowCount) === 0) {
-    alert('You Won!');
+    alert('Well Done! Go on!');
     showAllBricks();
   }
 }
 
 function showAllBricks() {
-  score = 0;
   bricksArr.forEach((col) => {
     col.forEach((brick) => (brick.visible = true));
   });
