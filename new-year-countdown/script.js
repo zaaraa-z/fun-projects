@@ -26,5 +26,11 @@ function updateCountDown() {
   second.innerText = remainingSec < 10 ? '0' + remainingSec : remainingSec;
 }
 
+//show loading before countdown
+setTimeout(() => {
+  loading.remove();
+  countdown.style.display = 'flex';
+}, 1300);
+
 //--------------------------------------------------
 setInterval(updateCountDown, 1000);

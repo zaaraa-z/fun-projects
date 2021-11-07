@@ -44,7 +44,8 @@ a {
 
 /*----------------------------------------------*/
 .countdown {
-  display: flex;
+  /* display: flex; */
+  display: none;
   justify-content: center;
   align-items: center;
   transform: scale(1.9);
