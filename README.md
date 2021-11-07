@@ -55,14 +55,9 @@ HTML5, CSS3, JS
 
 16- **["Search Lyrics!" app](https://zarazamanian.com/demo/lyric-search/)**: search the lyrics based on the song/artist name here. I finally learnt how to deal with CORS error in this project which means a lot to me!
 
-<<<<<<< HEAD
-
 17- **["Breathe With Me!"](https://codepen.io/zaaraa-z/full/pordLNm)**: a simple UI to practice deep breathing.
 
-
-=======
-17- **["Breathe With Me!"](https://codepen.io/zaaraa-z/full/pordLNm)**: a simple UI to practice deep breathing.
->>>>>>> 6725b70 (update README + add final functions and styles)
+18- **["Breakout Game"](https://www.zarazamanian.com/demo/breakout-game)**: wow! I learnt a lot in this project! It is a traditional game in which you should control the ball and break the bricks to win. Try it out!
 
 ## Contact
 
