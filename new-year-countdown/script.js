@@ -10,6 +10,8 @@ const currentYear = new Date().getFullYear();
 const newYearTime = new Date(`January 01 ${currentYear + 1} 00:00:00`);
 
 //--------------------------------------------------
+year.innerText = currentYear + 1;
+
 function updateCountDown() {
   const currentTime = new Date();
   const remainingTime = newYearTime - currentTime; //in milisecond
@@ -25,10 +27,4 @@ function updateCountDown() {
 }
 
 //--------------------------------------------------
-function updateYear() {
-  year.innerText = currentYear;
-}
-
-updateYear();
-
 setInterval(updateCountDown, 1000);
