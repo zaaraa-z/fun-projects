@@ -30,7 +30,6 @@ h1 {
 @media only screen and (max-width: 500px) {
   h1 {
     font-size: 8vw;
-    margin-top: 0;
   }
 }
 
@@ -68,6 +67,8 @@ a {
 }
 
 .year {
-  font-size: 15vh;
-  color: rgba(255, 255, 255, 0.219);
+  position: absolute;
+  bottom: 50px;
+  font-size: 20vh;
+  color: rgba(255, 255, 255, 0.116);
 }
