@@ -12,6 +12,7 @@ body {
     ),
     url(img/bg.jpg) no-repeat center center / cover;
   color: white;
+  text-shadow: 0 6px 7px black;
   text-align: center;
   margin: 0;
   min-height: 100vh;
@@ -23,11 +24,13 @@ body {
 
 h1 {
   font-size: 6vw;
-  margin: -50px auto 15px auto;
+  margin: -40px auto 15px auto;
+  word-spacing: -3px;
 }
 @media only screen and (max-width: 500px) {
   h1 {
     font-size: 8vw;
+    margin-top: 0;
   }
 }
 
@@ -46,6 +49,7 @@ a {
   justify-content: center;
   align-items: center;
   transform: scale(1.9);
+  margin-bottom: 60px;
 }
 
 .time {
@@ -58,4 +62,12 @@ a {
   .countdown {
     transform: scale(1);
   }
+  .countdown {
+    margin-bottom: 20px;
+  }
+}
+
+.year {
+  font-size: 15vh;
+  color: rgba(255, 255, 255, 0.219);
 }
