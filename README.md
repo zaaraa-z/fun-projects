@@ -61,6 +61,10 @@ HTML5, CSS3, JS
 
 19- **["New Year Countdown"](https://codepen.io/zaaraa-z/full/OJjZXdj)**: a landing page in which there is a timer showing the remaining days/hours/minutes, and seconds to the coming year!
 
+**To Do Features:**
+
+- [ ] Add background music which can be muted by user.
+
 20- **["Sortable List"](---)**: working on it...
 
 ## Contact
