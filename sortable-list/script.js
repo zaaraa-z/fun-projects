@@ -1,8 +1,8 @@
-const list = document.getElementById('sortable-list');
+const ulEl = document.getElementById('sortable-list');
 const checkBtn = document.getElementById('check-btn');
 
 //the main list in correct order
-const biggestStates = [
+const biggestStatesArr = [
   'Alaska',
   'Texas',
   'California',
@@ -15,13 +15,14 @@ const biggestStates = [
   'Wyoming',
 ];
 
-//the displaying list in DOM
+let dragStartLiIndex;
+
+//the displaying list in the DOM
 const listArr = [];
-// let index;
 
 //------------------------------------------------------
 function createList() {
-  [...biggestStates]
+  [...biggestStatesArr]
     .map((item) => ({ name: item, number: Math.random() }))
     .sort((a, b) => a.number - b.number)
     .map((item) => item.name)
@@ -38,8 +39,58 @@ function createList() {
     `;
 
       listArr.push(liEl);
-      list.appendChild(liEl);
+      ulEl.appendChild(liEl);
+
+      addDragEventListeners();
     });
+}
+
+function addDragEventListeners() {
+  const allLiEls = document.querySelectorAll('.sortable-list li');
+  const allDraggables = document.querySelectorAll('.draggable');
+
+  allDraggables.forEach((draggable) => {
+    draggable.addEventListener('dragstart', dragStart);
+  });
+
+  allLiEls.forEach((li) => {
+    li.addEventListener('dragenter', dragEnter);
+    li.addEventListener('dragover', dragOver);
+    li.addEventListener('dragleave', dragLeave);
+    li.addEventListener('drop', drop);
+  });
+}
+
+//drag and grop functions------------------------------------
+function dragStart() {
+  dragStartLiIndex = +this.closest('li').getAttribute('data-index');
+}
+
+function dragEnter() {
+  this.classList.add('over');
+}
+
+function dragOver(e) {
+  e.preventDefault();
+}
+
+function dragLeave() {
+  this.classList.remove('over');
+}
+
+function drop() {
+  const dragEndIndex = +this.getAttribute('data-index');
+  swapListItems(dragStartLiIndex, dragEndIndex);
+
+  this.classList.remove('over');
+}
+
+function swapListItems(start, end) {
+  const draggableStart = listArr[start].querySelector('.draggable');
+  const draggableEnd = listArr[end].querySelector('.draggable');
+
+  listArr[start].appendChild(draggableEnd);
+  listArr[end].appendChild(draggableStart);
 }
 
 //------------------------------------------------------
