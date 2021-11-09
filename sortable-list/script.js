@@ -71,6 +71,17 @@ function checkOrder() {
       item.classList.add('correct');
     }
   });
+
+  //show the winner message
+  const allCorrectItems = document.querySelectorAll('.correct');
+
+  if (allCorrectItems.length === 10) {
+    document.getElementById('message-container').style.display = 'block';
+
+    setTimeout(() => {
+      document.getElementById('message-container').style.display = 'none';
+    }, 2500);
+  }
 }
 
 //drag and grop functions------------------------------------
