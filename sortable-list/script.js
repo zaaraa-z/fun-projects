@@ -44,4 +44,3 @@ function createList() {
 
 //------------------------------------------------------
 createList();
-console.log(listArr);

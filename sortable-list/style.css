@@ -8,7 +8,7 @@ body {
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
-  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   color: rgba(73, 54, 75, 0.897);
   background-color: rgb(250, 244, 249);
 }
@@ -16,6 +16,11 @@ body {
 h1 {
   margin-bottom: 0;
   color: rgb(131, 37, 131);
+}
+
+p.introduction {
+  text-align: center;
+  max-width: 60vw;
 }
 
 /*list -------------------------------------*/
@@ -29,10 +34,12 @@ li {
   display: flex;
   align-items: center;
   justify-content: flex-start;
+  height: 50px;
 }
 
 li:not(:last-of-type) {
   border-bottom: solid 1px rgba(112, 11, 112, 0.432);
+  height: 51px;
 }
 
 .number {
