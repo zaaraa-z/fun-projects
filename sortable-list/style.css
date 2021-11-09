@@ -54,7 +54,7 @@ li:not(:last-of-type) {
   cursor: grab;
 }
 .draggable:hover {
-  background-color: rgba(161, 127, 155, 0.062);
+  background-color: rgba(161, 127, 155, 0.034);
 }
 .draggable:hover i,
 .draggable:hover .state-name {
@@ -67,6 +67,19 @@ li:not(:last-of-type) {
 
 .draggable i {
   color: rgb(131, 37, 131);
+}
+
+/*change the box bg-color when user drags over it*/
+li.over .draggable {
+  background-color: rgba(209, 133, 195, 0.514);
+}
+
+/*change the name color based on order status*/
+li.correct .state-name {
+  color: rgb(4, 158, 4);
+}
+li.wrong .state-name {
+  color: rgb(216, 21, 69);
 }
 
 /*button -------------------------------------*/
@@ -85,4 +98,12 @@ li:not(:last-of-type) {
   background-color: rgb(131, 37, 131);
   color: white;
   transition: 0.3s;
+}
+
+.btn:focus {
+  outline: none;
+}
+
+.btn:active {
+  transform: scale(0.93);
 }
