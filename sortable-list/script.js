@@ -80,7 +80,8 @@ function checkOrder() {
 
     setTimeout(() => {
       document.getElementById('message-container').style.display = 'none';
-    }, 2500);
+      location.reload();
+    }, 5000);
   }
 }
 
