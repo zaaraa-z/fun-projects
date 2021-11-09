@@ -1,0 +1,88 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 7vh auto 100px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  color: rgba(73, 54, 75, 0.897);
+  background-color: rgb(250, 244, 249);
+}
+
+h1 {
+  margin-bottom: 0;
+  color: rgb(131, 37, 131);
+}
+
+/*list -------------------------------------*/
+.sortable-list {
+  list-style: none;
+  border: solid 1px rgba(112, 11, 112, 0.432);
+  padding: 0;
+}
+
+li {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+li:not(:last-of-type) {
+  border-bottom: solid 1px rgba(112, 11, 112, 0.432);
+}
+
+.number {
+  background-color: rgb(131, 37, 131);
+  color: white;
+  height: 50px;
+  width: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.draggable {
+  padding: 0 15px;
+  display: flex;
+  flex: 1;
+  justify-content: space-between;
+  align-items: center;
+  cursor: grab;
+}
+.draggable:hover {
+  background-color: rgba(161, 127, 155, 0.062);
+}
+.draggable:hover i,
+.draggable:hover .state-name {
+  color: rgb(0, 0, 0);
+}
+
+.draggable .state-name {
+  margin-right: 20px;
+}
+
+.draggable i {
+  color: rgb(131, 37, 131);
+}
+
+/*button -------------------------------------*/
+.btn {
+  border: solid 2px rgb(131, 37, 131);
+  width: 100%;
+  background-color: white;
+  height: 50px;
+  font-size: 23px;
+  color: rgb(131, 37, 131);
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  background-color: rgb(131, 37, 131);
+  color: white;
+  transition: 0.3s;
+}
