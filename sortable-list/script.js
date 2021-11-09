@@ -61,6 +61,18 @@ function addDragEventListeners() {
   });
 }
 
+function checkOrder() {
+  listArr.forEach((item, index) => {
+    const USState = item.querySelector('.draggable').innerText.trim();
+    if (USState !== biggestStatesArr[index]) {
+      item.classList.add('wrong');
+    } else {
+      item.classList.remove('wrong');
+      item.classList.add('correct');
+    }
+  });
+}
+
 //drag and grop functions------------------------------------
 function dragStart() {
   dragStartLiIndex = +this.closest('li').getAttribute('data-index');
@@ -95,3 +107,5 @@ function swapListItems(start, end) {
 
 //------------------------------------------------------
 createList();
+
+checkBtn.addEventListener('click', checkOrder);
