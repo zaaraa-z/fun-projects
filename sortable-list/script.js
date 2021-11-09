@@ -21,11 +21,15 @@ const listArr = [];
 
 //------------------------------------------------------
 function createList() {
-  [...biggestStates].forEach((USState, index) => {
-    const liEl = document.createElement('li');
-    liEl.setAttribute('data-index', index);
+  [...biggestStates]
+    .map((item) => ({ name: item, number: Math.random() }))
+    .sort((a, b) => a.number - b.number)
+    .map((item) => item.name)
+    .forEach((USState, index) => {
+      const liEl = document.createElement('li');
+      liEl.setAttribute('data-index', index);
 
-    liEl.innerHTML = `
+      liEl.innerHTML = `
         <span class="number">${index + 1}</span>
         <div class="draggable" draggable="true">
             <p class="state-name">${USState}</p>
@@ -33,9 +37,9 @@ function createList() {
         </div>
     `;
 
-    listArr.push(liEl);
-    list.appendChild(liEl);
-  });
+      listArr.push(liEl);
+      list.appendChild(liEl);
+    });
 }
 
 //------------------------------------------------------
