@@ -57,7 +57,7 @@ HTML5, CSS3, JS
 
 17- **["Breathe With Me!"](https://codepen.io/zaaraa-z/full/pordLNm)**: a simple UI to practice deep breathing.
 
-18- **["Breakout Game"](https://www.zarazamanian.com/demo/breakout-game)**: wow! I learnt a lot in this project! It is a traditional game in which you should control the ball and break the bricks to win. Try it out!
+18- **["Breakout Game" - only for desktop](https://www.zarazamanian.com/demo/breakout-game)**: wow! I learnt a lot in this project! It is a traditional game in which you should control the ball and break the bricks to win. Try it out!
 
 **To Do Features:**
 
@@ -65,7 +65,9 @@ HTML5, CSS3, JS
 
 19- **["New Year Countdown"](https://codepen.io/zaaraa-z/full/OJjZXdj)**: a landing page in which there is a timer showing the remaining days/hours/minutes, and seconds to the coming year!
 
-20- **["Sortable List (Top-10 Game!)"](https://www.zarazamanian.com/demo/top-ten)**: this game kinda helps the user learn a bit about US geography! Try it! It is fun.
+20- **["Sortable List (Top-10 Game! - only for desktop)"](https://www.zarazamanian.com/demo/top-ten)**: this game kinda helps the user learn a bit about US geography! Try it! It is fun.
+
+21- **["Guess Number Outloud! Game"](https://www.zarazamanian.com/demo/guess-number-outloud)**: in this game you should guess the random number by talking! it was a good and fun practice for me to leran how to work with "Web Speech API".
 
 ## Contact
 
