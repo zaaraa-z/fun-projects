@@ -30,6 +30,7 @@ function showMessage(word) {
     <h2>Your Guess:</h2>
     <span id="guessed-number">${word}</span>
     `;
+  message.style.border = 'solid 1px';
 }
 
 //check the word and show the coresponding message
@@ -65,3 +66,9 @@ function checkWord(word) {
 //----------------------event listeners----------------------
 recognition.addEventListener('result', captureWord);
 recognition.addEventListener('end', () => recognition.start());
+
+document.body.addEventListener('click', (e) => {
+  if (e.target.id === 'play-again') {
+    window.location.reload();
+  }
+});
