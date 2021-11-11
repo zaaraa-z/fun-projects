@@ -67,7 +67,7 @@ HTML5, CSS3, JS
 
 20- **["Sortable List (Top-10 Game! - only for desktop)"](https://www.zarazamanian.com/demo/top-ten)**: this game kinda helps the user learn a bit about US geography! Try it! It is fun.
 
-21- **["Guess Number Outloud! Game"](https://www.zarazamanian.com/demo/guess-number-outloud)**: in this game you should guess the random number by talking! it was a good and fun practice for me to leran how to work with "Web Speech API".
+21- **["Guess Number Outloud! Game"](https://www.zarazamanian.com/demo/guess-number-outloud)**: in this game you should guess the random number by talking! it was a good and fun practice for me to learan how to work with "Web Speech API".
 
 ## Contact
 
