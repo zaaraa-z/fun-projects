@@ -1,0 +1,177 @@
+/*General----------------------------------------*/
+:root {
+  --green: #13d68f;
+  --orange: #f85036;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  width: 375px;
+  margin: auto;
+}
+
+h1,
+h4 {
+  margin: 0;
+  font-family: 'Barlow Semi Condensed', sans-serif;
+}
+
+p {
+  margin: 5px 0;
+  font-family: 'Fira Sans', sans-serif;
+}
+p.g-text {
+  color: var(--green);
+}
+p.o-text {
+  color: var(--orange);
+}
+p.reg-text {
+  font-weight: 400;
+}
+p.med-text {
+  font-weight: 500;
+}
+p.bold-text {
+  font-weight: 600;
+  font-size: 17px;
+}
+
+button {
+  background: var(--green);
+  color: white;
+  border: 0;
+  border-radius: 40px;
+  width: 90%;
+  margin: 15px 0;
+  padding: 8px 0;
+  text-align: center;
+  /* animation: r-to-l 3s; */
+  animation: heart-bit 2s infinite;
+}
+
+/*CTA----------------------------------------*/
+.cta {
+  height: 100vh;
+  text-align: center;
+}
+
+/*Header----------------------------------------*/
+.header {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 35vh;
+  background: url(img/bg.jpg) no-repeat top center / cover;
+}
+
+.header .close-icon {
+  height: 15px;
+  position: absolute;
+  left: 20px;
+  top: 20px;
+}
+
+.header h1 {
+  color: white;
+  width: 80%;
+  font-size: 40px;
+  text-shadow: 0 0 10px black;
+}
+
+.header .rating {
+  position: absolute;
+  bottom: 15px;
+}
+
+.header .rating .rating-stars {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.header .rating .rating-stars img {
+  margin: 0 2px;
+  height: 16px;
+}
+
+.header .rating .rating-stars p {
+  margin: 0 0 0 10px;
+}
+
+/*Features----------------------------------------*/
+.features {
+  margin: 25px 0 40px 0;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+}
+
+.features .ft {
+  margin: 12px 0;
+  width: 77%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  animation: l-to-r 3.5s;
+}
+
+.features .ft h4 {
+  font-size: 20px;
+}
+
+.features .ft img {
+  height: 23px;
+}
+
+/*Action----------------------------------------*/
+.action {
+  font-size: 13px;
+}
+
+.action p.description {
+  margin: 5px 40px;
+  text-align: left;
+  line-height: 20px;
+}
+
+/*Animations----------------------------------------*/
+@keyframes l-to-r {
+  0% {
+    transform: translateX(-100px);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes heart-bit {
+  0% {
+    transform: scale(0.8);
+  }
+  5% {
+    transform: scale(0.9);
+  }
+  10% {
+    transform: scale(0.8);
+  }
+  15% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(0.8);
+  }
+  100% {
+    transform: scale(0.8);
+  }
+}
