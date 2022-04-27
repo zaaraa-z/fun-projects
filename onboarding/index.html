@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="Zara Zamanian" />
+    <link rel="stylesheet" href="Resources/style.css" />
+    <title>ZaraZamanian|Onboarding</title>
+  </head>
+
+  <body>
+    <div class="onboarding">
+      <section class="nav" id="nav">
+        <a class="back-link" id="back-link">Back</a>
+
+        <div class="pagination">
+          <a class="dot active"></a>
+          <a class="dot"></a>
+          <a class="dot"></a>
+        </div>
+      </section>
+
+      <section class="steps-container" id="steps-container">
+        <section class="steps">
+          <div class="question">
+            <h1>Hi there,<br />how should we call you?</h1>
+          </div>
+
+          <div class="answer">
+            <form>
+              <input
+                type="text"
+                id="name"
+                placeholder="Your name"
+                autocomplete="off"
+              />
+            </form>
+          </div>
+        </section>
+
+        <section class="steps">
+          <div class="question">
+            <h1>
+              What's<br />
+              your weight,<br /><span id="dynamic-name"></span>?
+            </h1>
+          </div>
+
+          <div class="answer">
+            <form>
+              <input
+                type="text"
+                id="weight"
+                placeholder="Your weight"
+                autocomplete="off"
+              />
+              <span>kg</span>
+            </form>
+          </div>
+        </section>
+
+        <section class="steps">
+          <div class="question">
+            <h1>What's your preffered workout?</h1>
+          </div>
+
+          <div class="answer">
+            <div class="package-types" id="package-types">
+              <div class="package" id="easy">
+                <svg
+                  width="31"
+                  height="30"
+                  viewBox="0 0 31 30"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <g clip-path="url(#clip0)">
+                    <rect
+                      class="s"
+                      x="1.5"
+                      y="21"
+                      width="6"
+                      height="8"
+                      rx="1"
+                      stroke="#7D7EF3"
+                      stroke-width="2"
+                      stroke-linejoin="round"
+                    />
+                    <rect
+                      class="s"
+                      x="12.5"
+                      y="11"
+                      width="6"
+                      height="18"
+                      rx="1"
+                      stroke="#7D7EF3"
+                      stroke-width="2"
+                      stroke-linejoin="round"
+                    />
+                    <rect
+                      class="s"
+                      x="23.5"
+                      y="1"
+                      width="6"
+                      height="28"
+                      rx="1"
+                      stroke="#7D7EF3"
+                      stroke-width="2"
+                      stroke-linejoin="round"
+                    />
+                  </g>
+                  <defs>
+                    <clipPath id="clip0">
+                      <rect x="0.5" width="30" height="30" fill="white" />
+                    </clipPath>
+                  </defs>
+                </svg>
+
+                <h2>Easy</h2>
+                <p>All you need to stay healthy</p>
+              </div>
+
+              <div class="package" id="medium">
+                <svg
+                  width="31"
+                  height="30"
+                  viewBox="0 0 31 30"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <g clip-path="url(#clip0)">
+                    <rect
+                      class="sf"
+                      x="1.5"
+                      y="21"
+                      width="6"
+                      height="8"
+                      rx="1"
+                      fill="#EFBC67"
+                      stroke="#EFBC67"
+                      stroke-width="2"
+                      stroke-linejoin="round"
+                    />
+                    <rect
+                      class="s"
+                      x="12.5"
+                      y="11"
+                      width="6"
+                      height="18"
+                      rx="1"
+                      stroke="#EFBC67"
+                      stroke-width="2"
+                      stroke-linejoin="round"
+                    />
+                    <rect
+                      class="s"
+                      x="23.5"
+                      y="1"
+                      width="6"
+                      height="28"
+                      rx="1"
+                      stroke="#EFBC67"
+                      stroke-width="2"
+                      stroke-linejoin="round"
+                    />
+                  </g>
+                  <defs>
+                    <clipPath id="clip0">
+                      <rect x="0.5" width="30" height="30" fill="white" />
+                    </clipPath>
+                  </defs>
+                </svg>
+
+                <h2>Medium</h2>
+                <p>Not too easy, not too hard</p>
+              </div>
+
+              <div class="package" id="hard">
+                <svg
+                  width="31"
+                  height="30"
+                  viewBox="0 0 31 30"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <g clip-path="url(#clip0)">
+                    <rect
+                      class="sf"
+                      x="1.5"
+                      y="21"
+                      width="6"
+                      height="8"
+                      rx="1"
+                      fill="#EC506E"
+                      stroke="#EC506E"
+                      stroke-width="2"
+                      stroke-linejoin="round"
+                    />
+                    <rect
+                      class="sf"
+                      x="12.5"
+                      y="11"
+                      width="6"
+                      height="18"
+                      rx="1"
+                      fill="#EC506E"
+                      stroke="#EC506E"
+                      stroke-width="2"
+                      stroke-linejoin="round"
+                    />
+                    <rect
+                      class="s"
+                      x="23.5"
+                      y="1"
+                      width="6"
+                      height="28"
+                      rx="1"
+                      stroke="#EC506E"
+                      stroke-width="2"
+                      stroke-linejoin="round"
+                    />
+                  </g>
+                  <defs>
+                    <clipPath id="clip0">
+                      <rect x="0.5" width="30" height="30" fill="white" />
+                    </clipPath>
+                  </defs>
+                </svg>
+
+                <h2>Hard</h2>
+                <p>Pretty intense workout</p>
+              </div>
+
+              <div class="package" id="extreme">
+                <svg
+                  width="31"
+                  height="30"
+                  viewBox="0 0 31 30"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <g clip-path="url(#clip0)">
+                    <rect
+                      class="sf"
+                      x="1.5"
+                      y="21"
+                      width="6"
+                      height="8"
+                      rx="1"
+                      fill="#01033A"
+                      stroke="#01033A"
+                      stroke-width="2"
+                      stroke-linejoin="round"
+                    />
+                    <rect
+                      class="sf"
+                      x="12.5"
+                      y="11"
+                      width="6"
+                      height="18"
+                      rx="1"
+                      fill="#01033A"
+                      stroke="#01033A"
+                      stroke-width="2"
+                      stroke-linejoin="round"
+                    />
+                    <rect
+                      class="sf"
+                      x="23.5"
+                      y="1"
+                      width="6"
+                      height="28"
+                      rx="1"
+                      fill="#01033A"
+                      stroke="#01033A"
+                      stroke-width="2"
+                      stroke-linejoin="round"
+                    />
+                  </g>
+                  <defs>
+                    <clipPath id="clip0">
+                      <rect x="0.5" width="30" height="30" fill="white" />
+                    </clipPath>
+                  </defs>
+                </svg>
+
+                <h2>Extreme</h2>
+                <p>Pretty intense workout</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <button class="confirm-btn" type="button" id="confirm-btn"></button>
+      </section>
+
+      <section class="done" id="done">
+        <img src="Resources/pics/illustration.png" alt="illustration" />
+
+        <h1 class="done-header">You did it!<br />Let's get moving!</h1>
+        <p>
+          Personalized plan, diet and a fitness coach! Everything ready when you
+          are, let's get started!
+        </p>
+
+        <button class="done-btn">Start your jurney!</button>
+      </section>
+    </div>
+
+    <script src="Resources/script.js"></script>
+  </body>
+</html>
