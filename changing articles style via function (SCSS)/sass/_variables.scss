@@ -1,0 +1,29 @@
+//colors
+$purple: rgba(134, 34, 205, 0.69);
+$blue: rgb(111, 120, 250);
+$green: rgb(117, 194, 135);
+$red: rgb(105, 56, 70);
+
+//articles to loop in
+$articles: (
+  (
+    bg: $purple,
+    pad: 10px,
+    hsize: 2em,
+  ),
+  (
+    bg: $blue,
+    pad: 5px,
+    hsize: 1.5em,
+  ),
+  (
+    bg: $red,
+    pad: 40px,
+    hsize: 1em,
+  ),
+  (
+    bg: $green,
+    pad: 60px,
+    hsize: 3em,
+  )
+);
