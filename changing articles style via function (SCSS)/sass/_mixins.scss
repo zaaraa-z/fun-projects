@@ -1,0 +1,7 @@
+@mixin contrast($bg-color) {
+  @if lightness($bg-color) > 50% {
+    color: rgb(41, 40, 40);
+  } @else {
+    color: rgb(237, 216, 255);
+  }
+}

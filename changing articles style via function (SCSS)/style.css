@@ -10,6 +10,7 @@ section {
   margin-top: 40px;
 }
 section article {
+  margin: 20px 0;
   background-color: rgb(233, 224, 249);
   border-radius: 6px;
 }
@@ -20,12 +21,20 @@ section article#article-1 {
 section article#article-1 h2 {
   font-size: 2em;
 }
+section article#article-1 p,
+section article#article-1 h2 {
+  color: rgb(237, 216, 255);
+}
 section article#article-2 {
   background-color: rgb(111, 120, 250);
   padding: 5px;
 }
 section article#article-2 h2 {
   font-size: 1.5em;
+}
+section article#article-2 p,
+section article#article-2 h2 {
+  color: rgb(41, 40, 40);
 }
 section article#article-3 {
   background-color: rgb(105, 56, 70);
@@ -34,12 +43,20 @@ section article#article-3 {
 section article#article-3 h2 {
   font-size: 1em;
 }
+section article#article-3 p,
+section article#article-3 h2 {
+  color: rgb(237, 216, 255);
+}
 section article#article-4 {
   background-color: rgb(117, 194, 135);
   padding: 60px;
 }
 section article#article-4 h2 {
   font-size: 3em;
+}
+section article#article-4 p,
+section article#article-4 h2 {
+  color: rgb(41, 40, 40);
 }
 
 /*# sourceMappingURL=style.css.map */

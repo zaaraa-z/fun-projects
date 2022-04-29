@@ -1,4 +1,5 @@
 @import "variables";
+@import "mixins";
 
 body {
   margin: 30px;
@@ -12,9 +13,11 @@ section {
   margin-top: 40px;
 
   article {
+    margin: 20px 0;
     background-color: rgb(233, 224, 249);
     border-radius: 6px;
 
+    //loop
     @each $article in $articles {
       $i: index($articles, $article);
 
@@ -28,6 +31,7 @@ section {
 
         p,
         h2 {
+          @include contrast(map-get($article, bg));
         }
       }
     }
