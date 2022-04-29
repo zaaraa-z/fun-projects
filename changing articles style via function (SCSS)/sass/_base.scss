@@ -1,3 +1,5 @@
+@import "variables";
+
 body {
   margin: 30px;
 }
@@ -12,5 +14,22 @@ section {
   article {
     background-color: rgb(233, 224, 249);
     border-radius: 6px;
+
+    @each $article in $articles {
+      $i: index($articles, $article);
+
+      &#article-#{$i} {
+        background-color: map-get($article, bg);
+        padding: map-get($article, pad);
+
+        h2 {
+          font-size: map-get($article, hsize);
+        }
+
+        p,
+        h2 {
+        }
+      }
+    }
   }
 }

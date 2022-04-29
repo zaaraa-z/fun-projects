@@ -1,3 +1,45 @@
+body {
+  margin: 30px;
+}
 
+h1 {
+  color: rgb(94, 51, 204);
+}
+
+section {
+  margin-top: 40px;
+}
+section article {
+  background-color: rgb(233, 224, 249);
+  border-radius: 6px;
+}
+section article#article-1 {
+  background-color: rgba(134, 34, 205, 0.69);
+  padding: 10px;
+}
+section article#article-1 h2 {
+  font-size: 2em;
+}
+section article#article-2 {
+  background-color: rgb(111, 120, 250);
+  padding: 5px;
+}
+section article#article-2 h2 {
+  font-size: 1.5em;
+}
+section article#article-3 {
+  background-color: rgb(105, 56, 70);
+  padding: 40px;
+}
+section article#article-3 h2 {
+  font-size: 1em;
+}
+section article#article-4 {
+  background-color: rgb(117, 194, 135);
+  padding: 60px;
+}
+section article#article-4 h2 {
+  font-size: 3em;
+}
 
 /*# sourceMappingURL=style.css.map */
