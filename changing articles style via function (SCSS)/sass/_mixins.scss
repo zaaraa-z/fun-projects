@@ -1,7 +1,14 @@
+@import "variables";
+
+//use "if" in this mixin and apply the mixin in the loop code in "-base.scss"
 @mixin contrast($bg-color) {
-  @if lightness($bg-color) > 50% {
-    color: rgb(41, 40, 40);
+  @if $bg-color == $red {
+    color: yellow;
+  } @else if lightness($bg-color) > 50% {
+    color: $dark;
   } @else {
-    color: rgb(237, 216, 255);
+    color: $light;
   }
 }
+
+//or use the "if function" in "-base.scss" as it hast been showed there in comments

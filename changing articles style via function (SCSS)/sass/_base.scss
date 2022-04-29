@@ -21,6 +21,10 @@ section {
     @each $article in $articles {
       $i: index($articles, $article);
 
+      //variables to use in "if function" to make it shorter
+      // $if-bg-color: map-get($article, bg);
+      // $is-light: lightness($if-bg-color) > 50%;
+
       &#article-#{$i} {
         background-color: map-get($article, bg);
         padding: map-get($article, pad);
@@ -31,6 +35,12 @@ section {
 
         p,
         h2 {
+          //long version:
+          // color: if(lightness(map-get($article, bg)) > 50%, $dark, $light);
+
+          //short version:
+          // color: if($is-light, $dark, $light);
+
           @include contrast(map-get($article, bg));
         }
       }
