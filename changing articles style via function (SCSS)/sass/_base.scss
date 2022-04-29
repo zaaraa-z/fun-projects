@@ -67,5 +67,23 @@ section {
 
     //-----------------
     //----while loop----
+    // $i: 0;
+    // @while $i < length($colors) {
+    //   $i: $i + 1;
+
+    //   &#article-#{$i} {
+    //     background-color: nth($colors, $i);
+    //     padding: nth($padding, $i);
+
+    //     h2 {
+    //       font-size: nth($heading-size, $i);
+    //     }
+
+    //     p,
+    //     h2 {
+    //       @include contrast(nth($colors, $i));
+    //     }
+    //   }
+    // }
   }
 }
