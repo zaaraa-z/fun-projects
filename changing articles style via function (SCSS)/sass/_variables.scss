@@ -1,13 +1,13 @@
 //colors
-$purple: rgba(134, 34, 205, 0.69);
+$purple: rgb(110, 19, 175);
 $blue: rgb(111, 120, 250);
 $green: rgb(117, 194, 135);
-$red: rgb(105, 56, 70);
+$red: rgb(104, 42, 61);
 
 $light: rgb(237, 216, 255);
 $dark: rgb(41, 40, 40);
 
-//articles to loop in
+//articles for "each" loop
 $articles: (
   (
     bg: $purple,
@@ -30,3 +30,8 @@ $articles: (
     hsize: 3em,
   )
 );
+
+//lists for "for" loop
+$colors: $blue $green $red $purple;
+$padding: 10px 5px 40px 60px;
+$heading-size: 2em 1.5em 1em 3em;

@@ -17,7 +17,8 @@ section {
     background-color: rgb(233, 224, 249);
     border-radius: 6px;
 
-    //loop
+    //-----------------
+    //----each loop----
     @each $article in $articles {
       $i: index($articles, $article);
 
@@ -45,5 +46,26 @@ section {
         }
       }
     }
+
+    //-----------------
+    //----for loop----
+    // @for $i from 1 through length($colors) {
+    //   &#article-#{$i} {
+    //     background-color: nth($colors, $i);
+    //     padding: nth($padding, $i);
+
+    //     h2 {
+    //       font-size: nth($heading-size, $i);
+    //     }
+
+    //     p,
+    //     h2 {
+    //       @include contrast(nth($colors, $i));
+    //     }
+    //   }
+    // }
+
+    //-----------------
+    //----while loop----
   }
 }
