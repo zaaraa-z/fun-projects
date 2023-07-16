@@ -18,7 +18,7 @@ HTML5, CSS3, JS
 
 5-**[List](https://zarazamanian.com/demo/list)**: a practice to create a list of persons with their wealth using fetch API, and then sorting them, adding to the list, calculating the total wealth, etc.
 
-6- **[Menu Slider & Modal](https://zarazamanian.com/demo/menu-slider-&-modal)**: a simple website width a vertical menu slider which can be fold on click, and a customised modal to login.
+6- **[Menu Slider & Modal](https://zarazamanian.com/demo/menu-slider-and-modal)**: a simple website width a vertical menu slider which can be fold on click, and a customised modal to login.
 
 7- **["Guess Word" game](https://zarazamanian.com/demo/guess-word)** (a fun version of Hangman game): I tought, well, "Hangman" is not a pleasant name, AT ALL. It is not a joke to play a game in which you are going to hang a man just like that! So, my challenge was to think of a more delightful graphic and less emotional one! I love gardening, so, I chose this! You will ruin my sunflower if you guess wrong letters. I can live with that though! Seriously! Watching a flower dying is not a big deal in comparison to take a human being life!
 
@@ -39,9 +39,9 @@ HTML5, CSS3, JS
 
 11- **Infinite Scrolling** (fetch/load data on scroll): a template for blog or news website in which more data will be fetched when you are scrolling down. You can also search in loaded data for a special letter, word or sentence; whatever you type, the DOM will filter the data based on that.
 
-12- **["Type It Fast" game](https://zarazamanian.com/demo/type-it-fast/)**: a game to measure your typing speed! it has 3 difficulty levels and the timer changes based on your choice. I needed a random word creator API but I didn't find anything for free, so the random words are being created according to an array of words I have provided in the JS file.
+12- **["Type It Fast" game](https://zarazamanian.com/demo/type-it-fast)**: a game to measure your typing speed! it has 3 difficulty levels and the timer changes based on your choice. I needed a random word creator API but I didn't find anything for free, so the random words are being created according to an array of words I have provided in the JS file.
 
-13- **["Text to Speech" web app](https://codepen.io/zaaraa-z/pen/LYLqOLM)**: one of the things I remind myself of every now and then is that "You have to develop for the ones with disabilitis first!". I know how it is like to be disable, temporarily. We have to care about people who are limitted. This web app is a simple pne for autistic childs to express their feelings and needs via text and images.
+13- **["Text to Speech" web app](https://zarazamanian.com/demo/text-to-speech)**: one of the things I remind myself of every now and then is that "You have to develop for the ones with disabilitis first!". I know how it is like to be disable, temporarily. We have to care about people who are limitted. This web app is a simple pne for autistic childs to express their feelings and needs via text and images.
 
 14- **["Memory Cards" app](https://www.zarazamanian.com/demo/memory-cards)**: I really like this one! As a constant learner, I appreciate any tools to help learning more and more. This memory cards app helps you to add your own Q/A. the animations are very lovely. This was the first time I was using these techniques.
 
