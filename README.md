@@ -18,7 +18,7 @@ HTML5, CSS3, JS
 
 5-**[List](https://zarazamanian.com/demo/list)**: a practice to create a list of persons with their wealth using fetch API, and then sorting them, adding to the list, calculating the total wealth, etc.
 
-6- **[Menu Slider & Modal](https://zarazamanian.com/demo/menu-slider-and-modal)**: a simple website width a vertical menu slider which can be fold on click, and a customised modal to login.
+6- **[Menu Slider and Modal](https://zarazamanian.com/demo/menu-slider-and-modal)**: a simple website width a vertical menu slider which can be fold on click, and a customised modal to login.
 
 7- **["Guess Word" game](https://zarazamanian.com/demo/guess-word)** (a fun version of Hangman game): I tought, well, "Hangman" is not a pleasant name, AT ALL. It is not a joke to play a game in which you are going to hang a man just like that! So, my challenge was to think of a more delightful graphic and less emotional one! I love gardening, so, I chose this! You will ruin my sunflower if you guess wrong letters. I can live with that though! Seriously! Watching a flower dying is not a big deal in comparison to take a human being life!
 
