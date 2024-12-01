@@ -71,5 +71,4 @@ HTML5, CSS3, JS
 
 ## Contact
 
-zamanian.zahra@gmail.com  
 https://www.linkedin.com/in/zahra-zamanian/
